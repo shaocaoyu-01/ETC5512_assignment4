@@ -1,0 +1,97 @@
+---
+title: "Assignment4"
+output: html_document
+date: "2025-06-06"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Divergence or Convergence? Unpacking China’s Provincial Growth Trajectories
+
+Prepared by Caoyu Shao(Monash-ID:35323876)
+
+Assignment 4 ETC5512
+
+Due date: 2025-06-20
+
+<!-- ---------------------------------------------------------------------- -->
+
+<!-- Data Details -->
+
+<!-- ---------------------------------------------------------------------- -->
+
+## Data Details
+
+#### Topic of this work
+
+Since the reform and opening up, China's 
+economic development has been changing with 
+each passing day,however, the imbalance of 
+economic development has always troubled China. 
+This report will study the relationship between 
+the total economic volume and growth rate of 
+each province (autonomous region, municipality)
+since 1993, whether there is a Matthew
+effect or an equilibrium situation. 
+Furthermore, we will explore whether there are 
+different evolution laws in different regions
+and different stages.
+
+#### Data Description
+
+The data is a panel data of nearly 34 years
+from 1990 to 2024, which includes the total GDP
+GDP per capita, GDP growth rate, and spatially 
+includes 31 provincial-level administrative 
+regions in mainland China. The control 
+variables include the industrial structure of 
+the region, the growth rate of fixed asset 
+investment urbanization rate, per capita 
+education level, degree of opening up to the 
+outside world, scientific and technological 
+investment, geographic location.
+
+**Datasets：**
+
+1. **中国逐省份的GDP水平及其增速（1993-2023）：**
+
+    -  来源
+    -  内容
+    -  最近更新时间
+    -  数据类型
+    -  限制
+    -  隐私和道德风险
+    
+2. **中国的逐省份人均GDP水平及其增速（1993-2023）：**
+
+    -  来源
+    -  内容
+    -  最近更新时间
+    -  数据类型
+    -  限制
+    -  隐私和道德风险
+
+3. **中国的逐省份的产业结构、固定资产投资增速、城镇化率、人力资本、对外开放程度、科技投入、地理区位：**
+    
+    -  来源
+    -  内容
+    -  最近更新时间
+    -  数据类型
+    -  限制
+    -  隐私和道德风险
+    
+4.**中国逐省份地理信息图**
+
+    -  来源
+    -  内容
+    -  最近更新时间
+    -  数据类型
+    -  限制
+    -  隐私和道德风险
+    
+#### Data download
+
+
+
