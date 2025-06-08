@@ -93,5 +93,99 @@ investment, geographic location.
     
 #### Data download
 
+The following section describes how the data can be downloaded from its original sources and what initial data wrangling steps have been taken.
+
+```{r}
+knitr::opts_chunk$set(echo = TRUE,
+                      message = FALSE,
+                      warning = FALSE,
+                      eval = FALSE)
+                
+library(tidyverse)
+library(here)
+library(sf)
+library(patchwork)
+```
+
+**Downloading Dataset 1**
+
+```{r}
+#pull data 
+url = "https://data.stats.gov.cn/english/easyquery.htm?cn=E0103"
+# this data is about the number of residents in every province
+
+```
+
+**Downloading Dataset 2**
+```{r}
+#pull data 
+url = "https://data.stats.gov.cn/english/easyquery.htm?cn=E0103"
+# this data is about the GDP of each province 
+```
+
+**Downloading Dataset 3**
+```{r}
+
+#this  data is the controllable variables
+```
+
+**Downloading Dataset 4**
+```{r}
+
+```
+
+<!-- ---------------------------------------------------------------------- -->
+
+<!-- Blog post -->
+
+<!-- ---------------------------------------------------------------------- -->
+
+##Blog post
+
+### Why we take the data 
+
+### Data source for it 
+1.数据从哪里得来的
+2.对于数据里面的一些变量做解释
+3.
+
+### what the data tells us?
+
+### So what
+
+### what's really under the surface?
+
+###References
+
+R-packages
+
+Data
+
+Method and inspiration
 
 
+<!-- ---------------------------------------------------------------------- -->
+
+<!-- Behind the Scenes - Task 3 Tab -->
+
+<!-- ---------------------------------------------------------------------- -->
+
+## Behind the Scene
+
+### What's in the section
+
+#### Question 4
+
+*Tell us about a part(s) of your data processing or analysis that weren't "sexy" and wouldn't typically be included in a blog post. (e.g. Was their any data drudgery or time intensive wrangling? Were there any repetitive tasks or manual tasks? If it was easy, describe what made it easy?)*
+
+#### Question 5 
+
+*Were there any challenges that you faced in conducting this analysis. These may take the form of data limitations or coding challenges? (e.g. Was there anything in your analysis that you were not anticipating when you started? Did you have to change your intended scope?)*
+
+#### Question 6
+
+*Tell us about any imperfect parts of your work or how would like to expand this analysis in future? (We don't expect you to solve everything in one assignment.)*
+
+#### Question 7
+
+*An additional 2 marks will be awarded for the code you used to produce your analysis and report. These marks include reproducibility, compiling of your .html, production of any figures and tables etc.*
