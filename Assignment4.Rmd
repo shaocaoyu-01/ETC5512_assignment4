@@ -60,17 +60,20 @@ to measure the deep transformation of industrial structure. He defined it Indust
 Upgrade Index.In this article, I will use this indicator as an indicator to measure 
 our industrial structure
 
-According to Wenyue Li, Jungang Li(2022), the growth rate of fixed asset of investment has significantly contributed to the growth of the GDP_per_capita.
+According to Wenyue Li, Jungang Li(2022), the growth rate of fixed asset of
+investment has significantly contributed to the growth of the GDP_per_capita.
 
 According to Huiguo Zhang(2017), they concluded that the degree of opening up has 
 positive relationship with growth of GDP_per_capita. 
 
-According to Canjiang Song(2018), they found that the elasticity of urbanization rate to per capita GDP growth is about 0.15.
+According to Canjiang Song(2018), they found that the elasticity of urbanization
+rate to per capita GDP growth is about 0.15.
 
-According to Danjiao Zhan(2021), she found the investment on education has contributed to the GDP growth and did a quantitative analysis.
+According to Danjiao Zhan(2021), she found the investment on education has 
+contributed to the GDP growth and did a quantitative analysis.
  
-According to Dandan Su, she researched the R&D funds have positive relationship with 
-GDP Growth rate.
+According to Dandan Su, she researched the R&D funds have positive relationship 
+with GDP Growth rate.
 
 **Datasets：**
 
