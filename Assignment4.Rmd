@@ -60,82 +60,147 @@ to measure the deep transformation of industrial structure. He defined it Indust
 Upgrade Index.In this article, I will use this indicator as an indicator to measure 
 our industrial structure
 
-According to Wenyue Li, Jungang Li(2022), the growth rate of fixed asset of
-investment has significantly contributed to the growth of the GDP_per_capita.
+The fixed asset investment growth rate measures the annual percentage change 
+in gross fixed capital formation, capturing how much new spending on long-lived 
+physical assets. According to Wenyue Li, Jungang Li(2022), the growth rate of fixed 
+asset of investment has significantly contributed to the growth of the GDP_per_capita.
 
+The degree of opening up is an indicator referring to how extensively an economy 
+engages with the global market through trade, investment, and regulatory integration. 
 According to Huiguo Zhang(2017), they concluded that the degree of opening up has 
 positive relationship with growth of GDP_per_capita. 
 
+Urbanization rate means that the proportion of the residents who live in urban
+areas rather than rural areas. It matters because the residents who live in the
+urban areas usually created more GDP in average. 
 According to Canjiang Song(2018), they found that the elasticity of urbanization
 rate to per capita GDP growth is about 0.15.
 
+The investment on education and the level of R&D funds usually indicate the indensity of human capital. 
+More investment in Education , more indensity in human capital and the huamn 
+capital is crucial to GDP, commonly speaking, well-educated guys create more GDP.
 According to Danjiao Zhan(2021), she found the investment on education has 
-contributed to the GDP growth and did a quantitative analysis.
- 
-According to Dandan Su, she researched the R&D funds have positive relationship 
+contributed to the GDP growth and did a quantitative analysis.According to
+Dandan Su, she researched the R&D funds have positive relationship 
 with GDP Growth rate.
 
 **Datasets：**
 
-1.  **China's GDP level by province (1993-2023)：**
 
-    -   source: Chinese National Bureau of
-        Statistics(<https://data.stats.gov.cn/adv.htm?cn=C01>)
-    -   content: It includes the GDP of 31 provinces in China mainland
-        from 1993 to 2023
-    -   recent updated:
-    -   data form:
-    -   restriction: It includes the GDP of all the provinces without
-        the population so the GDP per capita is not straight forward.
-    -   ethics and privacies:
+1.  **China's province-by-province permanent population data
+    (1993-2023):**
+    
+    - source: Chinese National Bureau of
+      Statistics(<https://data.stats.gov.cn/adv.htm?cn=C01>)
+    - content: It includes the population data in every province in
+      China mainland from 1993 to 2023
+    - recent updated:
+    - data form:CSV
+    - restrictions: It includes the number of residents in every
+      province, but there are still some value not available.For example, the
+      number of residents before 2000 are not available.
+    - ethics and privacies
 
-2.  **China's province-by-province permanent population data
-    (1993-2023)：**
+   
 
-    -   source: Chinese National Bureau of
-        Statistics(<https://data.stats.gov.cn/adv.htm?cn=C01>)
-    -   content: It includes the population data in every province in
-        China mainland from 1993 to 2023
-    -   recent updated:
-    -   data form:CSV
-    -   restrictions: It includes the number of residents in every
-        province, but there are still some value not available.
-    -   ethics and privacies:
+2.  **China's GDP level by province(1993-2023):**
+
+    - source: Chinese National Bureau of
+      Statistics(<https://data.stats.gov.cn/adv.htm?cn=C01>)
+    - content: It includes the GDP of 31 provinces in China mainland
+      from 1993 to 2023
+    - recent updated:
+    - data form:
+    - restriction: It includes the GDP of all the provinces without
+      the population so the GDP per capita is not straight forward.
+    - ethics and privacies:
+    
+    
+  
 
 3.  **China's industrial structure by province:**
+    
+    - source: Chinese National Bureau of
+      Statistics(<https://data.stats.gov.cn/adv.htm?cn=C01>)
+    - content: It includes the ratio of the added value of the tertiary
+      industry to the added value of the secondary industry
+      to measure the deep transformation of industrial structure.
+    - recent update
+    - data form
+    - restrictions
+    - privacy and ethic risks
+    
 
-4.  **Fixed asset investment growth rate by province:**
+4.  **Fixed asset investment growth rate by province(2018-2023):**
 
-5.  **Urbanization rate by province:**
+    - source: Chinese National Bureau of 
+      Statistics(<https://data.stats.gov.cn/adv.htm?cn=C01>)
+    - content:It includes the data of the growing rate of fixed asset from 2018
+      to 2023. 
+    - recent update
+    - data form:.csv
+    - restrictions: There is only the data from 2018 to 2023, so it is not 
+      comprehensive. 
+    - privacy and ethic risks
+    
+    
+5.  **Urbanization rate by province(2005-2023):**
+
+    - source: Chinese Statistical Yearbook
+    - content: It includes the proportion of urban populations from 2005 to 2023
+    - recent update
+    - data form:.csv
+    - restrictions: The time range of the data is from 2005, not comprehensive.
+    - privacy and ethic risks
 
 6.  **Human capital level by province:**
 
+    - source
+    - content
+    - recent update
+    - data form
+    - restrictions
+    - privacy and ethic risks
+
 7.  **Degree of openness by province:**
 
+    - source
+    - content
+    - recent update
+    - data form
+    - restrictions
+    - privacy and ethic risks
+    
 8.  **Technology investment by province:**
 
-    -   来源
-    -   内容
-    -   最近更新时间
-    -   数据类型
-    -   限制
-    -   隐私和道德风险
+    - source
+    - content
+    - recent update
+    - data form
+    - restrictions
+    - privacy and ethic risks
 
 9.**GIS map by province**
 
-```         
--  source:GADM（Global Administrative Areas）(https://gadm.org/download_country_v3.html)，download the china's resource
--  content
--  recent updates
--  data form: .geojson
--  restrictions:
--  privacy and ethics risks
-```
+         
+    -  source:GADM（Global Administrative Areas）(https://gadm.org/download_country_v3.html)，download the china's resource
+    -  content
+    -  recent updates
+    -  data form: .geojson
+    -  restrictions:
+    -  privacy and ethics risks
 
-10.**Division of economic zones in each province:** - source: Chinese
-National Bureau of Statistics
-(<https://www.stats.gov.cn/zt_18555/zthd/lhfw/2021/rdwt/202302/t20230214_1903926.html>) -
-privacy and ethics risks
+
+10.**Division of economic zones in each province:** 
+
+    - source: Chinese National Bureau of Statistics
+(<https://www.stats.gov.cn/zt_18555/zthd/lhfw/2021/rdwt/202302/t20230214_1903926.html>) 
+    
+    - content
+    - recent update
+    - data form
+    - restrictions
+    - privacy and ethics risks
 
 #### Data download
 
@@ -249,6 +314,7 @@ panel_all <- panel_all |>
 **Downloading Dataset 10**
 
 ```{r}
+url =
 province_location <-
   read.csv(
     "data/province_location.csv"
@@ -274,7 +340,9 @@ panel_all <-
 
 ### Data source for it
 
-1.数据从哪里得来的 2.对于数据里面的一些变量做解释 3.
+1.数据从哪里得来的 
+2.对于数据里面的一些变量做解释 
+3.
 
 ### what the data tells us?
 
