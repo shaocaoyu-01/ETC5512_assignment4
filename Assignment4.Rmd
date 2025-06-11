@@ -155,11 +155,12 @@ with GDP Growth rate.
 
 6.  **Human capital level by province:**
 
-    - source
-    - content
+    - source: Statistical Bulletin on the Implementation of National Education 
+      Funding
+    - content:It contains the education investment by regions
     - recent update
-    - data form
-    - restrictions
+    - data form:.xls
+    - restrictions: it contains the education investment from 2001.
     - privacy and ethic risks
 
 7.  **Degree of openness by province:**
