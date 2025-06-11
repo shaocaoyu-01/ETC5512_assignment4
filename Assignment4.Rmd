@@ -165,8 +165,8 @@ with GDP Growth rate.
 
 7.  **Degree of openness by province:**
 
-    - source
-    - content
+    - source:
+    - content:
     - recent update
     - data form
     - restrictions
@@ -174,12 +174,12 @@ with GDP Growth rate.
     
 8.  **Technology investment by province:**
 
-    - source
-    - content
-    - recent update
-    - data form
-    - restrictions
-    - privacy and ethic risks
+    - source:
+    - content:
+    - recent update:
+    - data form:
+    - restrictions:
+    - privacy and ethic risks:
 
 9.**GIS map by province**
 
