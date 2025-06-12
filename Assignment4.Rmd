@@ -165,23 +165,19 @@ with GDP Growth rate.
 
 7.  **Degree of openness by province:**
 
-    - source:
-    - content:
+    - source:Chinese Statistical Yearbook
+    - content: It is not very easy to weigh the degree of openness by provinvce.
+      Then we come up that we could use the volumn of imports and exports of the
+      province. So we use the total volumn of the exports and imports to 
+      indicate the degree of openness by province.
     - recent update
-    - data form
-    - restrictions
+    - data form:.xls
+    - restrictions:The data is extracted from the Chinese Statistical Yearbook
     - privacy and ethic risks
     
-8.  **Technology investment by province:**
 
-    - source:
-    - content:
-    - recent update:
-    - data form:
-    - restrictions:
-    - privacy and ethic risks:
 
-9.**GIS map by province**
+8.**GIS map by province**
 
          
     -  source:GADM（Global Administrative Areas）(https://gadm.org/download_country_v3.html)，download the china's resource
@@ -192,15 +188,16 @@ with GDP Growth rate.
     -  privacy and ethics risks
 
 
-10.**Division of economic zones in each province:** 
+9.**Division of economic zones in each province:** 
 
     - source: Chinese National Bureau of Statistics
 (<https://www.stats.gov.cn/zt_18555/zthd/lhfw/2021/rdwt/202302/t20230214_1903926.html>) 
     
-    - content
+    - content: China was divided into four zones according to the Chinese Statistical
+      yearbook 
     - recent update
-    - data form
-    - restrictions
+    - data form:csv
+    - restrictions: The information is extracted from the html and edited manually.
     - privacy and ethics risks
 
 #### Data download
@@ -307,7 +304,7 @@ panel_all <- panel_all |>
 **Downloading Dataset 4**
 
 ```{r}
-
+The data set is about the growth rate of fixed asset.
 # This data is the map and the region separations
 
 ```
