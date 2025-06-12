@@ -155,12 +155,12 @@ with GDP Growth rate.
 
 6.  **Human capital level by province:**
 
-    - source: Statistical Bulletin on the Implementation of National Education 
-      Funding
+    - source: Ministry of Education
     - content:It contains the education investment by regions
     - recent update
     - data form:.xls
     - restrictions: it contains the education investment from 2001.
+    - release date:2024-12-19
     - privacy and ethic risks
 
 7.  **Degree of openness by province:**
@@ -220,6 +220,9 @@ library(rvest)
 library(stringr)
 library(dplyr)
 library(tidyr)
+library(readxl)
+
+
 
 ```
 
@@ -304,12 +307,105 @@ panel_all <- panel_all |>
 **Downloading Dataset 4**
 
 ```{r}
-The data set is about the growth rate of fixed asset.
-# This data is the map and the region separations
+# The data set is about the growth rate of fixed asset.
+#url = "https://data.stats.gov.cn/easyquery.htm?cn=E0103"
+# This data is about the growth rate of fixed asset. But unfortunately, the data dates from 2018 and is not comprehensive.
+library(tidyverse)
+Growth_rate_of_fixed_asset <- 
+               read_csv("data/Growth_rate_of_fixed_asset(2018-2023).csv",
+               locale = locale(encoding = "GB18030"),
+               skip = 3)
 
 ```
 
-**Downloading Dataset 10**
+**Downloading Dataset 5**
+```{r}
+# This data is about the urbanization rate in China.
+url = "https://www.stats.gov.cn/sj/ndsj/2021/indexch.htm"
+
+# this data is extracted from the China Satistical yearbook and it is downloaded manually.
+
+df1 <- 
+  read_csv(
+    "data/urbanization_rate(2005-2012).csv",
+    skip =2
+    )
+
+df2 <- 
+  read_csv(
+    "data/urbanization_rate(2013-2023).csv"
+    )
+
+urbanization_rate <- 
+  df1 |>
+  right_join(df2, by="Region")
+
+panel_urbanization_rate <- 
+  urbanization_rate|>
+  pivot_longer(
+    cols = -"Region",
+    names_to = "Year",
+    values_to = "rate")
+```
+
+**Downloading Dataset 6**
+```{r}
+
+#url = "http://www.moe.gov.cn/srcsite/A05/s3040/202412/t20241219_1167656.html" 
+      "http://en.moe.gov.cn/"
+
+Education_investment <- read_excel("data/education_investment(2001-2023).xlsx")
+
+
+
+
+
+Education_investment<-
+  Education_investment |>
+  rename(
+    Region = `...1` 
+  )
+
+
+panel_education_investment <- 
+  Education_investment|>
+  mutate(
+    across(
+      .cols = -Region,        
+      .fns  = ~ as.numeric(.),
+      .names = "{.col}")        
+  ) |>
+  pivot_longer(
+    cols      = -Region,
+    names_to  = "Year",
+    values_to = "Value"
+  )
+
+
+
+
+```
+
+**Downloading Dataset 7**
+```{r}
+#This data is about the degree of openness.It is the import and export volume of every province.
+
+openness <-
+  read_excel("data/import_and_export_volume(1996-2023).xlsx") |>
+   select(-...3) |> select(-...4)
+
+
+
+```
+
+**Downloading Dataset8**
+```{r}
+# this data is about the geographic information of each province in China
+
+
+```
+
+**Downloading Dataset 9**
 
 ```{r}
 url =
