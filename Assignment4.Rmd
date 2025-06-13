@@ -450,6 +450,20 @@ Internet to exclude their possible influence on our conclusions.
 ### what the data tells us?
 
 ```{r}
+library(dplyr)
+library(stringr)
+
+
+
+panel_all <- panel_all |>
+  # 先把因子转字符（如果是因子的话），再去首尾空白
+  mutate(zone = str_trim(as.character(zone))) %>%
+ 
+  # 最后再转回因子，水平就只会是真正的四个
+  mutate(zone = factor(zone))
+
+
+
 ggplot(
   data =panel_all,
   aes(x= GDP, y= GDP_growth_rate,color =zone))+
