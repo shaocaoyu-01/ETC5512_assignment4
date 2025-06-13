@@ -221,7 +221,7 @@ library(stringr)
 library(dplyr)
 library(tidyr)
 library(readxl)
-
+library(tibble)
 
 
 ```
@@ -230,7 +230,7 @@ library(readxl)
 
 ```{r}
 #pull data 
-url = "https://data.stats.gov.cn/english/easyquery.htm?cn=E0103"
+# url = "https://data.stats.gov.cn/english/easyquery.htm?cn=E0103"
 # this data is about the number of residents in every province
 annual_residents <- read.csv(
   file = "data/Annual_residents.csv",
@@ -245,6 +245,17 @@ panel_residents <- annual_residents |>
     names_to = "Year",
     values_to = "Residents"
   )
+
+
+clean_year <- 
+  function(df, year_col = "Year") {
+  df |>     #extract the number of year
+    mutate(
+      Year = parse_number(.data[[year_col]])
+    )
+}
+
+
 ```
 
 **Downloading Dataset 2**
@@ -292,15 +303,120 @@ panel_all <- panel_all |>
     GDP_per_capita_growth_rate = (GDP_per_capita - lag(GDP_per_capita))/lag(GDP_per_capita)
   )
 
- 
+ panel_all <-  clean_year(panel_all)
 ```
 
 **Downloading Dataset 3**
 
 ```{r}
 
-# This  data is the controllable variables
+# This  data is the ratio of the added value of the tertiary
+  #    industry to the added value of the secondary industry
+   #   to measure the deep transformation of industrial structure.
+second_industry_increase <- read_csv(
+  "data/second_industry_increase.csv",
+   locale = locale(encoding = "GB18030"),
+  skip=3 )
 
+second_industry_increase <- 
+  second_industry_increase|>
+ rename(
+    Region = `地区` 
+  )
+
+names(second_industry_increase)
+
+
+
+panel_second_industry_increase <- 
+  second_industry_increase|>
+  pivot_longer(
+    cols = -Region,
+    names_to = "Year",
+    values_to = "secondary_industry_increase"
+  )
+
+tertiary_industry_increase <- read_csv(
+  "data/tertiary_industry_increase.csv",
+   locale = locale(encoding = "GB18030"),
+  skip=3 )
+
+tertiary_industry_increase <- 
+  tertiary_industry_increase|>
+ rename(
+    Region = `地区` 
+  )
+
+panel_tertiary_industry_increase <- 
+  tertiary_industry_increase|>
+  pivot_longer(
+    cols = -Region,
+    names_to = "Year",
+    values_to = "tertiary_industry_increase"
+  )
+
+panel_industry_increase <- 
+  right_join(
+    panel_second_industry_increase,
+    panel_tertiary_industry_increase,
+    by=c("Region","Year")
+    ) |> mutate(
+      ratio =secondary_industry_increase/tertiary_industry_increase
+    )
+
+
+
+province_lookup <- tribble(
+  ~Province,             ~Province_EN,
+  "北京市",               "Beijing",
+  "天津市",               "Tianjin",
+  "上海市",               "Shanghai",
+  "重庆市",               "Chongqing",
+  "河北省",               "Hebei",
+  "山西省",               "Shanxi",
+  "辽宁省",               "Liaoning",
+  "吉林省",               "Jilin",
+  "黑龙江省",             "Heilongjiang",
+  "江苏省",               "Jiangsu",
+  "浙江省",               "Zhejiang",
+  "安徽省",               "Anhui",
+  "福建省",               "Fujian",
+  "江西省",               "Jiangxi",
+  "山东省",               "Shandong",
+  "河南省",               "Henan",
+  "湖北省",               "Hubei",
+  "湖南省",               "Hunan",
+  "广东省",               "Guangdong",
+  "海南省",               "Hainan",
+  "四川省",               "Sichuan",
+  "贵州省",               "Guizhou",
+  "云南省",               "Yunnan",
+  "陕西省",               "Shaanxi",
+  "甘肃省",               "Gansu",
+  "青海省",               "Qinghai",
+  "台湾省",               "Taiwan",
+  "内蒙古自治区",         "Inner Mongolia",
+  "广西壮族自治区",       "Guangxi",
+  "西藏自治区",           "Tibet",
+  "宁夏回族自治区",       "Ningxia",
+  "新疆维吾尔自治区",     "Xinjiang"
+)
+
+
+
+
+
+panel_industry_increase <- panel_industry_increase %>%
+  left_join(province_lookup,
+            by = c("Region" = "Province")) 
+
+panel_industry_increase <- panel_industry_increase %>%
+  select(-1) %>%                
+  select(last_col(), everything())
+
+panel_industry_increase <- 
+  clean_year(panel_industry_increase) |>
+  
 
 ```
 
@@ -310,11 +426,38 @@ panel_all <- panel_all |>
 # The data set is about the growth rate of fixed asset.
 #url = "https://data.stats.gov.cn/easyquery.htm?cn=E0103"
 # This data is about the growth rate of fixed asset. But unfortunately, the data dates from 2018 and is not comprehensive.
-library(tidyverse)
+
 Growth_rate_of_fixed_asset <- 
                read_csv("data/Growth_rate_of_fixed_asset(2018-2023).csv",
                locale = locale(encoding = "GB18030"),
                skip = 3)
+
+
+
+Growth_rate_of_fixed_asset  <- head(Growth_rate_of_fixed_asset,-1) 
+
+
+Growth_rate_of_fixed_asset <- Growth_rate_of_fixed_asset %>%
+  select(where(~ !any(is.na(.))))
+
+Growth_rate_of_fixed_asset <- Growth_rate_of_fixed_asset|>
+  rename(
+    Region = `地区`)
+
+Growth_rate_of_fixed_asset <- Growth_rate_of_fixed_asset %>%
+  left_join(province_lookup,
+            by = c("Region" = "Province")) |>
+  select(-1) %>%                
+  select(last_col(), everything()) 
+
+panel_growth_rate_of_fixed_asset <- 
+  Growth_rate_of_fixed_asset|>
+  pivot_longer(
+    cols = -Province_EN,
+    names_to = "Year",
+    values_to = "growth"
+  ) 
+  panel_growth_rate_of_fixed_asset <- clean_year(panel_growth_rate_of_fixed_asset)
 
 ```
 
@@ -338,7 +481,8 @@ df2 <-
 
 urbanization_rate <- 
   df1 |>
-  right_join(df2, by="Region")
+  right_join(df2, by="Region")|>
+  slice(-1)
 
 panel_urbanization_rate <- 
   urbanization_rate|>
@@ -352,7 +496,7 @@ panel_urbanization_rate <-
 ```{r}
 
 #url = "http://www.moe.gov.cn/srcsite/A05/s3040/202412/t20241219_1167656.html" 
-      "http://en.moe.gov.cn/"
+  #    "http://en.moe.gov.cn/"
 
 Education_investment <- read_excel("data/education_investment(2001-2023).xlsx")
 
@@ -362,9 +506,12 @@ Education_investment <- read_excel("data/education_investment(2001-2023).xlsx")
 
 Education_investment<-
   Education_investment |>
+  slice(-1)|>
   rename(
     Region = `...1` 
   )
+
+
 
 
 panel_education_investment <- 
@@ -381,7 +528,13 @@ panel_education_investment <-
     values_to = "Value"
   )
 
+panel_education_investment <- panel_education_investment %>%
+  left_join(province_lookup,
+            by = c("Region" = "Province")) 
 
+panel_education_investment<- panel_education_investment %>%
+  select(-1) %>%                
+  select(last_col(), everything()) 
 
 
 ```
@@ -392,7 +545,13 @@ panel_education_investment <-
 
 openness <-
   read_excel("data/import_and_export_volume(1996-2023).xlsx") |>
-   select(-...3) |> select(-...4)
+   select(-...3) |> 
+   select(-...4) |>
+   rename(
+    Province_EN = `省份`, 
+    Year = `年份`,
+    Volume =`进出口总额（亿元）`
+  )
 
 
 
@@ -400,8 +559,8 @@ openness <-
 
 **Downloading Dataset8**
 ```{r}
-# this data is about the geographic information of each province in China
-
+# this data is about the geographic information of each province in China, 
+#it is a html file and i have edited it manually.
 
 ```
 
@@ -442,7 +601,7 @@ Internet to exclude their possible influence on our conclusions.
 
 ### Data source for it
 
-1. Dataset 1,2,3,4,5,7 are all from the Chinese National Bureau of Statistics
+1. Dataset 1,2,3,4,5,7,9 are all from the Chinese National Bureau of Statistics
    Dataset 6 are from the Ministry of Education
 2.对于数据里面的一些变量做解释 
 3.
@@ -450,20 +609,65 @@ Internet to exclude their possible influence on our conclusions.
 ### what the data tells us?
 
 ```{r}
-library(dplyr)
-library(stringr)
-
-
 
 panel_all <- panel_all |>
-  # 先把因子转字符（如果是因子的话），再去首尾空白
+ 
   mutate(zone = str_trim(as.character(zone))) %>%
  
-  # 最后再转回因子，水平就只会是真正的四个
+
   mutate(zone = factor(zone))
 
+panel_all <- panel_all %>% mutate(Year = as.character(Year))
+panel_industry_increase <- panel_industry_increase %>% mutate(Year = as.character(Year))
 
 
+panel_all <- 
+  left_join(
+    panel_all,
+    panel_industry_increase,
+    by=c("Region" = "Province_EN",
+      "Year" )
+    )
+
+panel_all <- 
+  left_join(
+    panel_all,
+    panel_growth_rate_of_fixed_asset,
+    by =c("Region"= "Province_EN",
+          "Year")
+  )
+
+
+
+
+
+panel_all <- 
+  left_join(
+    panel_all,
+    panel_urbanization_rate,
+    by =c("Region",
+          "Year")
+  )
+
+panel_all <- 
+  left_join(
+    panel_all,
+    panel_education_investment,
+    by =c("Region"= "Province_EN",
+          "Year")
+  )
+
+panel_all <- 
+  left_join(
+    panel_all,
+    openness,
+    by =c("Region"="Province_EN",
+          "Year")
+  )
+
+
+  
+  
 ggplot(
   data =panel_all,
   aes(x= GDP, y= GDP_growth_rate,color =zone))+
@@ -488,6 +692,10 @@ ggplot(
 
 
 ```
+```{r}
+
+```
+
 
 ### So what
 
@@ -506,6 +714,7 @@ Data
 Method and inspiration
 
 Jin, S. (2025). Industrial Upgrading and New Quality Productive Forces: Evidence from China's Provincial Panel Data (2003–2022) [Preprint]. arXiv. https://arxiv.org/abs/2501.14258
+
 
 
 <!-- ---------------------------------------------------------------------- -->
