@@ -431,10 +431,19 @@ panel_all <-
 ##Blog post
 
 ### Why we take the data
+In order to study whether the development of Chinese provinces is regional 
+equilibrium or Matthew effect, we believe that it is crucial to capture the 
+relationship between the GDP of each province and its GDP growth rate. 
+However, after reading some literature, we found that there are many control 
+variables that can affect the GDP growth rate, such as the growth rate of fixed
+asset investment, urbanization level, education investment level, and degree 
+of opening up to the outside world. So we collected these data from the entire
+Internet to exclude their possible influence on our conclusions.
 
 ### Data source for it
 
-1.数据从哪里得来的 
+1. Dataset 1,2,3,4,5,7 are all from the Chinese National Bureau of Statistics
+   Dataset 6 are from the Ministry of Education
 2.对于数据里面的一些变量做解释 
 3.
 
