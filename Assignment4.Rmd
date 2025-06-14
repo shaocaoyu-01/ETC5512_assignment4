@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Prepared by Caoyu_Shao (Monash-ID:35323876)
 
-Assignment 4 ETC5512
+Assignment_4 ETC5512
 
 Due date: 2025-06-20
 
@@ -222,6 +222,12 @@ library(dplyr)
 library(tidyr)
 library(readxl)
 library(tibble)
+library(ggpmisc)
+library(ggplot2)
+
+
+
+
 
 
 ```
@@ -415,7 +421,7 @@ panel_industry_increase <- panel_industry_increase %>%
   select(last_col(), everything())
 
 panel_industry_increase <- 
-  clean_year(panel_industry_increase) |>
+  clean_year(panel_industry_increase)
   
 
 ```
@@ -455,7 +461,7 @@ panel_growth_rate_of_fixed_asset <-
   pivot_longer(
     cols = -Province_EN,
     names_to = "Year",
-    values_to = "growth"
+    values_to = "growth_rate_of_fixed_asset"
   ) 
   panel_growth_rate_of_fixed_asset <- clean_year(panel_growth_rate_of_fixed_asset)
 
@@ -489,7 +495,7 @@ panel_urbanization_rate <-
   pivot_longer(
     cols = -"Region",
     names_to = "Year",
-    values_to = "rate")
+    values_to = "urbanization_rate")
 ```
 
 **Downloading Dataset 6**
@@ -525,7 +531,7 @@ panel_education_investment <-
   pivot_longer(
     cols      = -Region,
     names_to  = "Year",
-    values_to = "Value"
+    values_to = "Education_investment"
   )
 
 panel_education_investment <- panel_education_investment %>%
@@ -560,18 +566,21 @@ openness <-
 **Downloading Dataset8**
 ```{r}
 # this data is about the geographic information of each province in China, 
-#it is a html file and i have edited it manually.
-
+# url = https://gadm.org/download_country.html
+# choose country =China， level=1. 
 ```
 
 **Downloading Dataset 9**
 
 ```{r}
-url =
+#it is a html file and i have edited it manually.
 province_location <-
   read.csv(
     "data/province_location.csv"
     )
+province_location$zone<-
+  trimws(province_location$zone)
+
 panel_all <- 
   panel_all |>
   right_join(
@@ -608,17 +617,17 @@ Internet to exclude their possible influence on our conclusions.
 
 ### what the data tells us?
 
+####Data Wrangling
 ```{r}
 
-panel_all <- panel_all |>
- 
-  mutate(zone = str_trim(as.character(zone))) %>%
- 
-
-  mutate(zone = factor(zone))
 
 panel_all <- panel_all %>% mutate(Year = as.character(Year))
 panel_industry_increase <- panel_industry_increase %>% mutate(Year = as.character(Year))
+panel_growth_rate_of_fixed_asset <- panel_growth_rate_of_fixed_asset|> mutate(Year =as.character(Year))
+panel_urbanization_rate <- panel_urbanization_rate |> mutate(Year = as.character(Year))
+panel_education_investment <- panel_education_investment|>mutate(Year=as.character(Year))
+openness <- openness|>mutate(Year =as.character(Year))
+
 
 
 panel_all <- 
@@ -628,6 +637,7 @@ panel_all <-
     by=c("Region" = "Province_EN",
       "Year" )
     )
+
 
 panel_all <- 
   left_join(
@@ -668,34 +678,183 @@ panel_all <-
 
   
   
-ggplot(
-  data =panel_all,
-  aes(x= GDP, y= GDP_growth_rate,color =zone))+
-  geom_point(size =3, alpha =0.7) +
-  geom_smooth(method = "lm",
-              se = FALSE,
-              linetype = "dashed")+
-  labs(
-    title = "GDP & Growth Rate by Region",
-    x = "gdp(100M )",
-    y = "Annual_growth_rate(%)",
-    color= "Region"
-  ) +
-  theme_minimal(base_size = 14) +
-  theme(
-    plot.title = element_text(hjust =0.5),
-    legend.position ="bottom"
-  )+
-  facet_wrap(~ zone)
-
 
 
 
 ```
+
+####Visuaization
+
 ```{r}
 
+# 1. We extract a year's data, like 2020.
+df2020 <- panel_all %>%
+  arrange(Region, Year) %>%      
+  group_by(Region) %>%          
+  mutate(gdp_lag = lag(GDP)) %>%   
+  ungroup()
+
+# 2. Draw a plot
+p1 <- ggplot(df2020, aes(x = log(gdp_lag), y = GDP_growth_rate, color = zone)) +
+  geom_point(size = 3, alpha = 0.8) +
+  stat_smooth(method = "lm", se = FALSE, linetype = "dashed") + 
+  # Add a linear regression line
+  stat_poly_eq(
+    aes(label = paste(..eq.label.., ..rr.label.., sep = "~~~")),
+    formula = y ~ x, parse = TRUE, size = 3
+  ) +
+  scale_color_brewer(type = "qual", palette = "Set1") +
+  labs(
+    title = "in 2020 the last year's GDP vs GDP growth rate for the year",
+    x = "Logarithm of GDP in the previous year",
+    y = "Year-on-year GDP growth rate (%)",
+    color = "zone"
+  ) +
+  theme_minimal(base_size = 14)
+
+print(p1)
+
 ```
 
+```{r}
+library(tidyr)
+library(ggplot2)
+
+# 1. calculate the average number of the whole country
+national_avg <- panel_all %>%
+  group_by(Year) %>%
+  summarize(
+    gdp_avg = mean(GDP, na.rm = TRUE),
+    gdp_pc_avg = mean(GDP_per_capita, na.rm = TRUE)
+  )
+
+# 2. extract some typical provinces to make a sample
+
+provs <- c("Guangdong", "Beijing", "Guizhou", "Yunnan")
+df_sub <- panel_all %>% filter(Region %in% provs)
+
+# 3. Combine provincial data and national average into the same long format
+df_plot <- bind_rows(
+  df_sub %>% select(Region, Year, value = GDP) %>% mutate(type = Region),
+  national_avg %>% select(Year, value = gdp_avg) %>% mutate(province = "National", type = "National")
+)
+
+# 4. 绘图
+p2 <- ggplot(df_plot, aes(x = Year, y = value, color = type)) +
+  geom_line(size = 1) +
+  geom_point(size = 2) +
+  labs(
+    title = "Time series comparison of GDP of typical provinces",
+    x = "Year",
+    y = "GDP(100 million)",
+    color = ""
+  ) +
+  scale_color_manual(values = c("National" = "black", "Guangdong" = "#1b9e77",
+                                "Beijing" = "#d95f02", "Guizhou" = "#7570b3", "Yunnan" = "#e7298a")) +
+  theme_minimal(base_size = 14)  +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
+
+print(p2)
+
+
+```
+
+```{r}
+library(ineq)  
+
+
+sigma_df <- panel_all %>%
+  group_by(Year) %>%
+  summarize(
+    sd_log_gdp = sd(log(GDP), na.rm = TRUE),
+    cv_gdp = sd(GDP, na.rm = TRUE) / mean(GDP, na.rm = TRUE),
+    theil_gdp = Theil(GDP)
+  ) %>%
+  pivot_longer(-Year, names_to = "metric", values_to = "value")
+
+sigma_df <- sigma_df %>%
+  mutate(Year = as.numeric(as.character(Year)))
+
+p3 <- ggplot(sigma_df, aes(x = Year, y = value)) +
+  geom_line(size = 1) +
+  facet_wrap(~ metric, scales = "free_y", ncol = 1, strip.position = "right") +
+  labs(
+    title = "Provincial GDP dispersion index changes by year",
+    x = "Year",
+    y = "Index value"
+  ) +
+  theme_minimal(base_size = 14)
+
+print(p3)
+
+```
+
+```{r}
+library(sf)
+library(dplyr)
+library(ggplot2)
+library(viridis)
+library(gganimate)
+
+# 1. 读取并投影省级边界
+china_sf <- st_read("data/gadm41_CHN_shp/gadm41_CHN_1.shp") %>%
+  st_transform(4326)
+
+# 2. 将面板数据和空间数据合并，得到每个省每年的几何与指标
+map_data <- panel_all %>%
+  # 确保 Year 是数值型
+  mutate(Year = as.integer(Year)) %>%
+  # 内连接保证只留下两边都有的省份+年份组合
+  left_join(china_sf, by = c("Region" = "NAME_1")) %>%
+  st_as_sf()
+
+# 3. 搭建 ggplot 对象（不含动画）
+p <- ggplot(map_data) +
+  geom_sf(aes(fill = GDP_growth_rate), color = "grey90", size = 0.2) +
+  scale_fill_viridis_c(
+    option   = "plasma",
+    direction= -1,
+    na.value = "white",
+    name      = "增速 (%)"
+  ) +
+  labs(
+    title = 'China provincial GDP growth: {frame_time}',
+    subtitle = "Year：{frame_time}",
+    x = NULL, y = NULL
+  ) +
+  theme_void(base_size = 14) +
+  theme(
+    plot.title    = element_text(hjust = 0.5, size = 18),
+    plot.subtitle = element_text(hjust = 0.5, size = 14)
+  )
+
+# 4. 加入动画效果：按 Year 连续过渡
+p_anim <- p +
+  transition_time(Year) +
+  ease_aes('linear')
+
+# 5. 渲染并保存（GIF 或 MP4）
+anim <- animate(
+  p_anim,
+  nframes = length(unique(map_data$Year)) * 2,  # 每年两帧，更平滑
+  fps     = 5,                                  # 每秒 5 帧
+  width   = 800,
+  height  = 600,
+  renderer = gifski_renderer()                  # GIF
+)
+
+anim_save("china_gdp_growth.gif", animation = anim)
+
+
+
+
+
+
+
+```
 
 ### So what
 
@@ -714,6 +873,7 @@ Data
 Method and inspiration
 
 Jin, S. (2025). Industrial Upgrading and New Quality Productive Forces: Evidence from China's Provincial Panel Data (2003–2022) [Preprint]. arXiv. https://arxiv.org/abs/2501.14258
+
 
 
 
