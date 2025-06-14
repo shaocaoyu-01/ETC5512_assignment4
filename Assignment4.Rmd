@@ -27,7 +27,9 @@ Due date: 2025-06-20
 
 ## Data Details
 
+
 #### Topic of this work
+
 
 Since the reform and opening up, China's economic development has been
 changing with each passing day,however, the imbalance of economic
@@ -37,6 +39,7 @@ province (autonomous region, municipality) since 1993, whether there is
 a Matthew effect or an equilibrium situation. Furthermore, we will
 explore whether there are different evolution laws in different regions
 and different stages.
+
 
 #### Data Description
 
@@ -177,7 +180,7 @@ with GDP Growth rate.
     
 
 
-8.**GIS map by province**
+8.  **GIS map by province**
 
          
     -  source:GADM（Global Administrative Areas）(https://gadm.org/download_country_v3.html)，download the china's resource
@@ -188,7 +191,7 @@ with GDP Growth rate.
     -  privacy and ethics risks
 
 
-9.**Division of economic zones in each province:** 
+9.  **Division of economic zones in each province:** 
 
     - source: Chinese National Bureau of Statistics
 (<https://www.stats.gov.cn/zt_18555/zthd/lhfw/2021/rdwt/202302/t20230214_1903926.html>) 
@@ -224,12 +227,14 @@ library(readxl)
 library(tibble)
 library(ggpmisc)
 library(ggplot2)
-
-
-
-
-
-
+library(viridis)
+library(gganimate)
+library(car)
+library(olsrr)
+library(broom)
+library(plm)
+library(lmtest)   
+library(sandwich) 
 ```
 
 **Downloading Dataset 1**
@@ -611,13 +616,13 @@ Internet to exclude their possible influence on our conclusions.
 ### Data source for it
 
 1. Dataset 1,2,3,4,5,7,9 are all from the Chinese National Bureau of Statistics
-   Dataset 6 are from the Ministry of Education
-2.对于数据里面的一些变量做解释 
-3.
+2.  Dataset 6 are from the Ministry of Education
+3.  some explanations about the varibales 
+
 
 ### what the data tells us?
 
-####Data Wrangling
+####Data processing
 ```{r}
 
 
@@ -675,11 +680,116 @@ panel_all <-
           "Year")
   )
 
+panel_all <- 
+  panel_all|>
+  mutate(Year =as.integer(Year))|>
+  arrange(Region,Year) |>
+  group_by(Region)|>
+  mutate(
+    GDP_lag =lag(GDP),
+    log_GDP_lag =log(GDP_lag),
+    log_GDP = log(GDP)
+  ) |>
+  ungroup() |>
+  filter(!is.na(GDP_lag))
 
-  
-  
+panel_all <- panel_all|>
+  mutate(
+    Edu_share = Education_investment/GDP,
+    Trade_share = Volume/GDP
+  )
+
+```
 
 
+####Descriptive statistics and collinearity tests
+
+```{r}
+panel_all|>
+  select(GDP_growth_rate,GDP_per_capita_growth_rate,log_GDP_lag,ratio,urbanization_rate,Trade_share,Edu_share,growth_rate_of_fixed_asset)|>
+  summary()
+
+
+ols_base <- lm(GDP_per_capita_growth_rate ~ log_GDP_lag 
+               + ratio + urbanization_rate + Trade_share + Edu_share + growth_rate_of_fixed_asset, 
+               data = panel_all %>% filter(Year==2020))
+vif(ols_base)
+
+```
+
+####Cross-Sectional (2020) Regression Example
+
+```{r}
+df20 <- panel_all %>% filter(Year == 2020)
+# 1. Absolute β convergence
+lm1 <- lm(GDP_per_capita_growth_rate ~ log_GDP_lag, data = df20)
+summary(lm1)
+
+# 2. Conditional β convergence
+lm2 <- lm(GDP_per_capita_growth_rate  ~ log_GDP_lag+
+                    ratio+
+                    urbanization_rate+
+                    Trade_share+ 
+                    Edu_share+ 
+                    growth_rate_of_fixed_asset,
+          data = df20)
+summary(lm2)
+
+tidy(lm2) %>%
+  filter(term != "(Intercept)") %>%
+  ggplot(aes(x = estimate, y = term)) +
+    geom_point() +
+    geom_errorbarh(aes(xmin=estimate-1.96*std.error,
+                       xmax=estimate+1.96*std.error),
+                   height=0.2) +
+    labs(title="Conditional beta convergence regression coefficients for 2020",
+         x="Coefficient estimates", y="variable") +
+    theme_minimal()
+
+```
+
+
+
+####Panel fixed effects regression
+```{r}
+pdata <- pdata.frame(panel_all, index = c("Region","Year"))
+
+fe_mod <- plm(GDP_per_capita_growth_rate ~ log_GDP_lag+
+                    ratio+
+                    urbanization_rate+
+                    Trade_share+ 
+                    Edu_share+ 
+                    growth_rate_of_fixed_asset,
+              data   = pdata,
+              model  = "within",
+              effect = "twoways")
+summary(fe_mod)
+
+tidy(fe_mod, conf.int = TRUE) %>%
+  filter(term != "Intercept")
+
+
+```
+
+####Robustness test
+
+```{r}
+
+#here a Robustness test is required. 
+```
+####σ convergence
+
+```{r}
+
+sigma_df <- panel_all %>%
+  group_by(Year) %>%
+  summarize(sd_logGDP = sd(log_GDP, na.rm=TRUE))
+
+ggplot(sigma_df, aes(x=Year,y=sd_logGDP)) +
+  geom_line(size=1) +
+  labs(title="The standard deviation of the logarithmic GDP of each province changes with the year",
+       x="Year", y="sd") +
+  theme_minimal()
 
 ```
 
@@ -695,7 +805,7 @@ df2020 <- panel_all %>%
   ungroup()
 
 # 2. Draw a plot
-p1 <- ggplot(df2020, aes(x = log(gdp_lag), y = GDP_growth_rate, color = zone)) +
+p1 <- ggplot(df2020, aes(x = log(gdp_lag), y = GDP_per_capita_growth_rate, color = zone)) +
   geom_point(size = 3, alpha = 0.8) +
   stat_smooth(method = "lm", se = FALSE, linetype = "dashed") + 
   # Add a linear regression line
@@ -707,7 +817,7 @@ p1 <- ggplot(df2020, aes(x = log(gdp_lag), y = GDP_growth_rate, color = zone)) +
   labs(
     title = "in 2020 the last year's GDP vs GDP growth rate for the year",
     x = "Logarithm of GDP in the previous year",
-    y = "Year-on-year GDP growth rate (%)",
+    y = "Year-on-year GDP_per_capita growth rate (%)",
     color = "zone"
   ) +
   theme_minimal(base_size = 14)
@@ -730,27 +840,27 @@ national_avg <- panel_all %>%
 
 # 2. extract some typical provinces to make a sample
 
-provs <- c("Guangdong", "Beijing", "Guizhou", "Yunnan")
+provs <- c("Guangdong", "Beijing", "Guizhou", "Liaoning")
 df_sub <- panel_all %>% filter(Region %in% provs)
 
 # 3. Combine provincial data and national average into the same long format
 df_plot <- bind_rows(
-  df_sub %>% select(Region, Year, value = GDP) %>% mutate(type = Region),
-  national_avg %>% select(Year, value = gdp_avg) %>% mutate(province = "National", type = "National")
+  df_sub %>% select(Region, Year, value = GDP_per_capita) %>% mutate(type = Region),
+  national_avg %>% select(Year, value = gdp_pc_avg) %>% mutate(province = "National", type = "National")
 )
 
-# 4. 绘图
+# 4. draw plots
 p2 <- ggplot(df_plot, aes(x = Year, y = value, color = type)) +
   geom_line(size = 1) +
   geom_point(size = 2) +
   labs(
     title = "Time series comparison of GDP of typical provinces",
     x = "Year",
-    y = "GDP(100 million)",
+    y = "GDP_per_capita(10 thousand Yuan)",
     color = ""
   ) +
   scale_color_manual(values = c("National" = "black", "Guangdong" = "#1b9e77",
-                                "Beijing" = "#d95f02", "Guizhou" = "#7570b3", "Yunnan" = "#e7298a")) +
+                                "Beijing" = "#d95f02", "Guizhou" = "#7570b3", "Liaoning" = "#e7298a")) +
   theme_minimal(base_size = 14)  +
   theme(
     axis.text.x = element_text(angle = 45, hjust = 1)
@@ -792,33 +902,38 @@ print(p3)
 
 ```
 
-```{r}
-library(sf)
-library(dplyr)
-library(ggplot2)
-library(viridis)
-library(gganimate)
+```{r render-gif, cache=TRUE, echo=FALSE, message= FALSE, warning=FALSE}
 
-# 1. 读取并投影省级边界
+# 1. Read and project provincial boundaries
 china_sf <- st_read("data/gadm41_CHN_shp/gadm41_CHN_1.shp") %>%
   st_transform(4326)
+names(china_sf)
 
-# 2. 将面板数据和空间数据合并，得到每个省每年的几何与指标
-map_data <- panel_all %>%
-  # 确保 Year 是数值型
+panel_for_map <- panel_all|> select(Region,GDP,Year,GDP_per_capita_growth_rate)
+
+panel_for_map <- 
+  panel_for_map |>
+  mutate(Region = recode(Region,
+                        "Xinjiang"="Xinjiang Uygur" ,
+                        "Tibet" = "Xizang" ,
+                       "Inner Mongolia"=  "Nei Mongol"))
+
+# 2. Combine panel data and spatial data to obtain the geometry and indicators of each province each year
+map_data <- panel_for_map %>%
+  
   mutate(Year = as.integer(Year)) %>%
-  # 内连接保证只留下两边都有的省份+年份组合
+  
   left_join(china_sf, by = c("Region" = "NAME_1")) %>%
   st_as_sf()
 
-# 3. 搭建 ggplot 对象（不含动画）
+# 3. Build a ggplot object (without animation)
 p <- ggplot(map_data) +
-  geom_sf(aes(fill = GDP_growth_rate), color = "grey90", size = 0.2) +
+  geom_sf(aes(fill = GDP_per_capita_growth_rate), color = "grey90", size = 0.2) +
   scale_fill_viridis_c(
     option   = "plasma",
     direction= -1,
     na.value = "white",
-    name      = "增速 (%)"
+    name      = "increase_rate (%)"
   ) +
   labs(
     title = 'China provincial GDP growth: {frame_time}',
@@ -831,34 +946,40 @@ p <- ggplot(map_data) +
     plot.subtitle = element_text(hjust = 0.5, size = 14)
   )
 
-# 4. 加入动画效果：按 Year 连续过渡
+# 4. Add animation effect: continuous transition by Year
 p_anim <- p +
   transition_time(Year) +
   ease_aes('linear')
 
-# 5. 渲染并保存（GIF 或 MP4）
+gif_path <- "china_gdp_per_capita_growth.gif"
+
+# 5. Render and save (GIF or MP4)
+if(!file.exists(gif_path)){
 anim <- animate(
   p_anim,
-  nframes = length(unique(map_data$Year)) * 2,  # 每年两帧，更平滑
-  fps     = 5,                                  # 每秒 5 帧
+  nframes = length(unique(map_data$Year)) * 2,  
+  fps     = 5,                                  
   width   = 800,
   height  = 600,
-  renderer = gifski_renderer()                  # GIF
+  renderer = gifski_renderer()                  
 )
 
-anim_save("china_gdp_growth.gif", animation = anim)
-
-
-
+anim_save("china_gdp_per_capita_growth.gif", animation = anim)
+}else{message("Using cached GIF:",gif_path)}
 
 
 
 
 ```
 
+
 ### So what
 
 ### what's really under the surface?
+The conclusion is that, from the perspective of GDP_per_capita, China
+is going to convergence.
+Explanation:
+
 
 ###References
 
@@ -895,12 +1016,20 @@ Was their any data drudgery or time intensive wrangling? Were there any
 repetitive tasks or manual tasks? If it was easy, describe what made it
 easy?)*
 
+
+
 #### Question 5
 
 *Were there any challenges that you faced in conducting this analysis.
 These may take the form of data limitations or coding challenges? (e.g.
 Was there anything in your analysis that you were not anticipating when
 you started? Did you have to change your intended scope?)*
+
+When we first analyzed the Matthew effect or regional equilibrium, we used GDP and GDP growth rate. We believed that when the GDP growth rate was positively correlated with the total GDP, we could draw the conclusion of the Matthew effect. But later we found through empirical analysis that there is no such pattern. This is because China's various provincial administrative regions were not evenly divided at the beginning. On the contrary, the two most developed cities in China, Beijing and Shanghai, have provincial administrative levels, but their administrative scope is very small, which leads to their economic totals not being at the forefront nationwide. If the Matthew effect is significant, these two cities must have the highest economic growth, but the data shows that the two regions ranked ninth (Shanghai) and eleventh (Beijing) have the highest economic growth. This obviously does not conform to our empirical analysis. So later we chose to use per capita GDP and its growth as indicators.
+
+Later, in the process of empirical analysis, we found that some provinces, such as Tibet, whose administrative regions are mostly located in the Qinghai-Tibet Plateau, have sparse economic activities. Its GDP in 2024 is 296.4 billion, which is only about 2% of the first place, Guangdong Province's 14163.3 billion. This led to extreme values in our analysis. Later, we found that a common practice is to take the logarithm of GDP and then conduct empirical analysis with other variables.
+
+At the beginning, we used the government's annual investment in education as an indicator of education investment, and the sum of each region's commodity imports and exports to measure a region's degree of openness. Later we found three problems. First, the multicollinearity analysis failed, because the government's investment in education is often regarded as part of government investment. It and exports can be included in GDP at the same time, increasing and decreasing together. Second, when analyzing the data, we found that wealthy provinces naturally performed better in education and import and export volumes, while poor provinces invested less in education and had less import and export trade. This cannot measure the degree of importance a region places on education and the degree of openness to the outside world, which is contrary to the original intention of our setting up this control variable. So later we used the proportion of education investment in GDP as an indicator of education investment, and the proportion of imports and exports in GDP as an indicator of openness to the outside world.
 
 #### Question 6
 
