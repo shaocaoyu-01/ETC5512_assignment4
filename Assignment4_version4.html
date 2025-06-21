@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2025-06-06">
+
+<title>Assignment4</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="Assignment4_version4_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Assignment4_version4_files/libs/quarto-html/quarto.js"></script>
+<script src="Assignment4_version4_files/libs/quarto-html/popper.min.js"></script>
+<script src="Assignment4_version4_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Assignment4_version4_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Assignment4_version4_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Assignment4_version4_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Assignment4_version4_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Assignment4_version4_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Assignment4_version4_files/libs/bootstrap/bootstrap-c0367b04c37547644fece4185067e4a7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Assignment4</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 6, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="reasearch-between-the-gdp-per-capita-and-its-growth-rate-by-province-in-china" class="level1 tabset">
+<h1 class="tabset">Reasearch between the GDP per capita and its growth rate by province in China</h1>
+<p>Prepared by Caoyu_Shao (Monash-ID:35323876)</p>
+<p>Assignment_4 ETC5512</p>
+<p>Due date: 2025-06-20</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Data Details</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Blog post</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Behind the Scene</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Appendix</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<section id="topic-of-this-work" class="level4">
+<h4 class="anchored" data-anchor-id="topic-of-this-work">Topic of this work</h4>
+<p>Since the reform and opening up, China’s economic development has been changing with each passing day,however, the imbalance of economic development has always troubled China. This report will study the relationship between the total economic volume and growth rate of each province (autonomous region, municipality) since 1993, whether there is a Matthew effect or an equilibrium situation. Furthermore, we will explore whether there are different evolution laws in different regions and different stages.</p>
+</section>
+<section id="data-description" class="level4">
+<h4 class="anchored" data-anchor-id="data-description">Data Description</h4>
+<p>We compile a 30-year (1993–2023) provincial panel dataset that includes total GDP, GDP per capita, and per-capita GDP growth rates. This allows us to investigate imbalances in development across mainland China’s provinces and their evolution over time, and in particular to analyze how GDP volumes relate to growth rates.</p>
+<p>GDP growth reflects a wide range of influences. Prior studies have identified key drivers—including industrial structure, fixed-asset investment growth, urbanization rate, per-capita education level, degree of openness, and R&amp;D intensity—and we therefore include all of these as control variables in our regressions.</p>
+<p>Industrial structure. Following <a href="https://arxiv.org/abs/2501.14258">Solar Jin</a>, who documents a strong link between industrial upgrading and per-capita GDP growth, we adopt his Industrial Upgrade Index—the ratio of tertiary-sector value added to secondary-sector value added—as our measure of structural transformation. <span class="citation" data-cites="jin2025industrial">(<a href="#ref-jin2025industrial" role="doc-biblioref">Jin, 2025</a>)</span></p>
+<p>Fixed-asset investment growth. We measure this as the annual percentage change in gross fixed capital formation. <a href="https://pdf.hanspub.org/SA20220600000_22861074.pdf">Li &amp; Li</a> show that faster fixed-asset investment growth significantly boosts per-capita GDP growth. <span class="citation" data-cites="li2022empirical">(<a href="#ref-li2022empirical" role="doc-biblioref">Li &amp; Li, 2022</a>)</span></p>
+<p>Degree of opening up. Defined as the extent of engagement with global markets via trade, foreign investment, and regulatory liberalization, openness has been found by <a href="https://www.hanspub.org/journal/PaperInformation?paperID=21026">Gu, Z. and Zhang, H. and Hu, X.</a> to have a positive effect on per-capita GDP growth. <span class="citation" data-cites="gu2013effect">(<a href="#ref-gu2013effect" role="doc-biblioref">Gu et al., 2013</a>)</span></p>
+<p>Urbanization rate. Calculated as the share of the population living in urban areas—where per-capita output is generally higher—Song et al. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0959652618320316">Song, Cheng and Liu, Qi and Gu, Shulin and Wang, Qunfeng</a> estimate an elasticity of roughly 0.15 with respect to per-capita GDP growth. <span class="citation" data-cites="song2018impact">(<a href="#ref-song2018impact" role="doc-biblioref">Song et al., 2018</a>)</span></p>
+<p>Human-capital intensity. We proxy this by per-capita education expenditure and R&amp;D spending. Greater investment in education raises human-capital endowments—critical for output creation—and <a href="https://www.hanspub.org/journal/PaperInformation?paperID=89863">Wang, Y. and others</a> quantitatively confirms that education funding is a significant driver of per-capita GDP growth. <span class="citation" data-cites="wang2021education">(<a href="#ref-wang2021education" role="doc-biblioref">Wang et al., 2021</a>)</span></p>
+</section>
+<section id="data-dictionary" class="level4">
+<h4 class="anchored" data-anchor-id="data-dictionary">Data dictionary</h4>
+<ol type="1">
+<li><p><strong>China’s province-by-province permanent population data (1993-2023):</strong></p>
+<ul>
+<li>source: Chinese National Bureau of Statistics(<a href="https://data.stats.gov.cn/adv.htm?cn=C01" class="uri">https://data.stats.gov.cn/adv.htm?cn=C01</a>)</li>
+<li>content: It includes the population data in every province in China mainland from 1993 to 2023</li>
+<li>data form: census data</li>
+<li>restrictions: It includes the number of residents in every province, but there are still some value not available.For example, the number of residents before 2000 are not available.</li>
+<li>ethics and privacies: 1.Provincial data are highly aggregated statistical summaries that do not involve any specific information about individuals or families and cannot be used to re-identify individuals. Therefore, there is generally no direct privacy leakage issue. 2.The reprint or quotation of the contents of this database must be a reasonable and good-faith quotation for the purpose of using news or data-based public free information. The reprint or quotation of the copyrighted contents of this database must indicate the words “Source: National Bureau of Statistics”. There is no problem if we use it in our assignment.</li>
+</ul></li>
+<li><p><strong>China’s GDP level by province(1993-2023):</strong></p>
+<ul>
+<li>source: Chinese National Bureau of Statistics(<a href="https://data.stats.gov.cn/adv.htm?cn=C01" class="uri">https://data.stats.gov.cn/adv.htm?cn=C01</a>)</li>
+<li>content: It includes the GDP of 31 provinces in China mainland from 1993 to 2023</li>
+<li>data form:census data</li>
+<li>restriction: It includes the GDP of all the provinces without the population so the GDP per capita is not straight forward.</li>
+<li>ethics and privacies:1.Provincial data are highly aggregated statistical summaries that do not involve any specific information about individuals or families and cannot be used to re-identify individuals. Therefore, there is generally no direct privacy leakage issue. 2.The reprint or quotation of the contents of this database must be a reasonable and good-faith quotation for the purpose of using news or data-based public free information. The reprint or quotation of the copyrighted contents of this database must indicate the words “Source: National Bureau of Statistics”. There is no problem if we use it in our assignment.</li>
+</ul></li>
+<li><p><strong>China’s industrial structure by province:</strong></p>
+<ul>
+<li>source: Chinese National Bureau of Statistics(<a href="https://data.stats.gov.cn/adv.htm?cn=C01" class="uri">https://data.stats.gov.cn/adv.htm?cn=C01</a>)</li>
+<li>content: It includes the ratio of the added value of the tertiary industry to the added value of the secondary industry to measure the deep transformation of industrial structure.</li>
+<li>data form:census data</li>
+<li>restrictions: This is a derived data. We could get the added value of tertiary industry and secondary industry from source, but the ratio is through calculation.</li>
+<li>privacy and ethic risks:1.Provincial data are highly aggregated statistical summaries that do not involve any specific information about individuals or families and cannot be used to re-identify individuals. Therefore, there is generally no direct privacy leakage issue. 2.The reprint or quotation of the contents of this database must be a reasonable and good-faith quotation for the purpose of using news or data-based public free information. The reprint or quotation of the copyrighted contents of this database must indicate the words “Source: National Bureau of Statistics”. There is no problem if we use it in our assignment.</li>
+</ul></li>
+<li><p><strong>Fixed asset investment growth rate by province(2018-2023):</strong></p>
+<ul>
+<li>source: Chinese National Bureau of Statistics(<a href="https://data.stats.gov.cn/adv.htm?cn=C01" class="uri">https://data.stats.gov.cn/adv.htm?cn=C01</a>)</li>
+<li>content:It includes the data of the growing rate of fixed asset from 2018 to 2023.</li>
+<li>data form:.census data</li>
+<li>restrictions: There is only the data from 2018 to 2023, so it is not comprehensive.</li>
+<li>privacy and ethic risks:1.Provincial data are highly aggregated statistical summaries that do not involve any specific information about individuals or families and cannot be used to re-identify individuals. Therefore, there is generally no direct privacy leakage issue. 2.The reprint or quotation of the contents of this database must be a reasonable and good-faith quotation for the purpose of using news or data-based public free information. The reprint or quotation of the copyrighted contents of this database must indicate the words “Source: National Bureau of Statistics”. There is no problem if we use it in our assignment.</li>
+</ul></li>
+<li><p><strong>Urbanization rate by province(2005-2023):</strong></p>
+<ul>
+<li>source: Chinese Statistical Yearbook(<a href="https://www.stats.gov.cn/sj/ndsj/)" class="uri">https://www.stats.gov.cn/sj/ndsj/)</a></li>
+<li>content: It includes the proportion of urban populations from 2005 to 2023</li>
+<li>data form:census data</li>
+<li>restrictions: The time range of the data is from 2005, not comprehensive.</li>
+<li>privacy and ethic risks:1.Provincial data are highly aggregated statistical summaries that do not involve any specific information about individuals or families and cannot be used to re-identify individuals. Therefore, there is generally no direct privacy leakage issue. 2.The reprint or quotation of the contents of this database must be a reasonable and good-faith quotation for the purpose of using news or data-based public free information. The reprint or quotation of the copyrighted contents of this database must indicate the words “Source: National Bureau of Statistics”. There is no problem if we use it in our assignment.</li>
+</ul></li>
+<li><p><strong>Human capital level by province:</strong></p>
+<ul>
+<li>source: Ministry of Education(<a href="http://www.moe.gov.cn/jyb_xxgk/xxgk/neirong/tongji/jytj_jftjgg/)" class="uri">http://www.moe.gov.cn/jyb_xxgk/xxgk/neirong/tongji/jytj_jftjgg/)</a></li>
+<li>content:It contains the education investment by regions</li>
+<li>data form:census data</li>
+<li>restrictions: it contains the education investment from 2001.</li>
+<li>release date: 2024-12-19</li>
+<li>privacy and ethic risks:1.Provincial data are highly aggregated statistical summaries that do not involve any specific information about individuals or families and cannot be used to re-identify individuals. Therefore, there is generally no direct privacy leakage issue. 2.The reprint or quotation of the contents of this database must be a reasonable and good-faith quotation for the purpose of using news or data-based public free information. The reprint or quotation of the copyrighted contents of this database must indicate the words “Source: National Bureau of Statistics”. There is no problem if we use it in our assignment.</li>
+</ul></li>
+<li><p><strong>Degree of openness by province:</strong></p>
+<ul>
+<li>source:Chinese Statistical Yearbook(<a href="https://www.stats.gov.cn/sj/ndsj/)" class="uri">https://www.stats.gov.cn/sj/ndsj/)</a></li>
+<li>content: It is not very easy to weigh the degree of openness by provinvce. Then we come up that we could use the volumn of imports and exports of the province. So we use the total volumn of the exports and imports to indicate the degree of openness by province.</li>
+<li>data form:census data</li>
+<li>restrictions:The data is extracted from the Chinese Statistical Yearbook</li>
+<li>privacy and ethic risks:1.Provincial data are highly aggregated statistical summaries that do not involve any specific information about individuals or families and cannot be used to re-identify individuals. Therefore, there is generally no direct privacy leakage issue. 2.The reprint or quotation of the contents of this database must be a reasonable and good-faith quotation for the purpose of using news or data-based public free information. The reprint or quotation of the copyrighted contents of this database must indicate the words “Source: National Bureau of Statistics”. There is no problem if we use it in our assignment.</li>
+</ul></li>
+<li><p><strong>GIS map by province</strong></p>
+<ul>
+<li>source:GADM（Global Administrative Areas）(<a href="https://gadm.org/download_country_v3.html)，download" class="uri">https://gadm.org/download_country_v3.html)，download</a> the china’s resource</li>
+<li>content: It is the geographic information about the provincial map in China.</li>
+<li>data form: census data</li>
+<li>privacy and ethics risks:1.Provincial data are highly aggregated statistical summaries that do not involve any specific information about individuals or families and cannot be used to re-identify individuals. Therefore, there is generally no direct privacy leakage issue. 2.The reprint or quotation of the contents of this database must be a reasonable and good-faith quotation for the purpose of using news or data-based public free information. The reprint or quotation of the copyrighted contents of this database must indicate the words “Source: National Bureau of Statistics”. There is no problem if we use it in our assignment.</li>
+</ul></li>
+<li><p><strong>Division of economic zones in each province:</strong></p>
+<ul>
+<li><p>source: Chinese National Bureau of Statistics (<a href="https://www.stats.gov.cn/zt_18555/zthd/lhfw/2021/rdwt/202302/t20230214_1903926.html" class="uri">https://www.stats.gov.cn/zt_18555/zthd/lhfw/2021/rdwt/202302/t20230214_1903926.html</a>)</p></li>
+<li><p>content: China was divided into four zones according to the Chinese Statistical yearbook</p></li>
+<li><p>data form: census data</p></li>
+<li><p>restrictions: The information is extracted from the html and edited manually.</p></li>
+<li><p>privacy and ethics risks:1.Provincial data are highly aggregated statistical summaries that do not involve any specific information about individuals or families and cannot be used to re-identify individuals. Therefore, there is generally no direct privacy leakage issue. 2.The reprint or quotation of the contents of this database must be a reasonable and good-faith quotation for the purpose of using news or data-based public free information. The reprint or quotation of the copyrighted contents of this database must indicate the words “Source: National Bureau of Statistics”. There is no problem if we use it in our assignment.</p></li>
+</ul></li>
+</ol>
+</section>
+<section id="data-download" class="level4">
+<h4 class="anchored" data-anchor-id="data-download">Data download</h4>
+<p>The following section describes how the data can be downloaded from its original sources and what initial data wrangling steps have been taken.</p>
+<p><strong>Downloading Dataset 1</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pull data </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>url <span class="ot">=</span> <span class="st">"https://data.stats.gov.cn/english/easyquery.htm?cn=E0103"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># this data is about the number of residents in every province</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>annual_residents <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">file =</span> <span class="st">"data/Annual_residents.csv"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">header =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">skip =</span> <span class="dv">3</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>annual_residents <span class="ot">&lt;-</span> <span class="fu">head</span>(annual_residents,<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>panel_residents <span class="ot">&lt;-</span> annual_residents <span class="sc">|&gt;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">-</span>Region,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"Year"</span>,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"Residents"</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>clean_year <span class="ot">&lt;-</span> </span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="cf">function</span>(df, <span class="at">year_col =</span> <span class="st">"Year"</span>) {</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  df <span class="sc">|&gt;</span>     <span class="co">#extract the number of year</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>      <span class="at">Year =</span> <span class="fu">parse_number</span>(.data[[year_col]])</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Downloading Dataset 2</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#pull data </span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>url <span class="ot">=</span> <span class="st">"https://data.stats.gov.cn/english/easyquery.htm?cn=E0103"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># this data is about the GDP of each province </span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>annual_gdp <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">file =</span> <span class="st">"data/Annual_gdp.csv"</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">header =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">skip =</span> <span class="dv">3</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>annual_gdp <span class="ot">&lt;-</span> <span class="fu">head</span>(annual_gdp,<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>panel_gdp <span class="ot">&lt;-</span> annual_gdp <span class="sc">|&gt;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">-</span>Region,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span>   <span class="st">"Year"</span>,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"GDP"</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>panel_all <span class="ot">&lt;-</span> </span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    panel_gdp,</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    panel_residents,</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">by=</span> <span class="fu">c</span>(<span class="st">"Region"</span>,<span class="st">"Year"</span>)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>panel_all <span class="ot">&lt;-</span> </span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>   <span class="fu">mutate</span>(</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>     panel_all,</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>     <span class="st">"GDP_per_capita"</span> <span class="ot">=</span> GDP<span class="sc">/</span>Residents</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>     )</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>panel_all <span class="ot">&lt;-</span> <span class="fu">clean_year</span>(panel_all)</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>panel_all <span class="ot">&lt;-</span> panel_all<span class="sc">|&gt;</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Region,Year)<span class="sc">|&gt;</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Region)<span class="sc">|&gt;</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">GDP_prev =</span> dplyr<span class="sc">::</span><span class="fu">lag</span>(GDP),</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">GDP_growth_rate =</span> (GDP <span class="sc">-</span> GDP_prev)<span class="sc">/</span>GDP_prev,</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>         <span class="at">GDPpc_prev =</span>dplyr<span class="sc">::</span><span class="fu">lag</span>(GDP_per_capita),</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">GDP_per_capita_growth_rate =</span>(GDP_per_capita <span class="sc">-</span> GDPpc_prev)<span class="sc">/</span>GDPpc_prev)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Downloading Dataset 3</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This  data is the ratio of the added value of the tertiary</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">#    industry to the added value of the secondary industry</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>   <span class="co">#   to measure the deep transformation of industrial structure.</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>second_industry_increase <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"data/second_industry_increase.csv"</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>   <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">"GB18030"</span>),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">skip=</span><span class="dv">3</span> )</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(second_industry_increase)[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">"Region"</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>panel_second_industry_increase <span class="ot">&lt;-</span> </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  second_industry_increase<span class="sc">|&gt;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">-</span>Region,</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"Year"</span>,</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"secondary_industry_increase"</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>tertiary_industry_increase <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="st">"data/tertiary_industry_increase.csv"</span>,</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>   <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">"GB18030"</span>),</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">skip=</span><span class="dv">3</span> )</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a> <span class="fu">names</span>(tertiary_industry_increase)[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">"Region"</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>panel_tertiary_industry_increase <span class="ot">&lt;-</span> </span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>  tertiary_industry_increase<span class="sc">|&gt;</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">-</span>Region,</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"Year"</span>,</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"tertiary_industry_increase"</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>panel_industry_increase <span class="ot">&lt;-</span> </span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    panel_second_industry_increase,</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>    panel_tertiary_industry_increase,</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">by=</span><span class="fu">c</span>(<span class="st">"Region"</span>,<span class="st">"Year"</span>)</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>      <span class="at">ratio =</span>secondary_industry_increase<span class="sc">/</span>tertiary_industry_increase</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>province_lookup <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>Province,             <span class="sc">~</span>Province_EN,</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>  <span class="st">"北京市"</span>,               <span class="st">"Beijing"</span>,</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>  <span class="st">"天津市"</span>,               <span class="st">"Tianjin"</span>,</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>  <span class="st">"上海市"</span>,               <span class="st">"Shanghai"</span>,</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>  <span class="st">"重庆市"</span>,               <span class="st">"Chongqing"</span>,</span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>  <span class="st">"河北省"</span>,               <span class="st">"Hebei"</span>,</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>  <span class="st">"山西省"</span>,               <span class="st">"Shanxi"</span>,</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>  <span class="st">"辽宁省"</span>,               <span class="st">"Liaoning"</span>,</span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>  <span class="st">"吉林省"</span>,               <span class="st">"Jilin"</span>,</span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>  <span class="st">"黑龙江省"</span>,             <span class="st">"Heilongjiang"</span>,</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>  <span class="st">"江苏省"</span>,               <span class="st">"Jiangsu"</span>,</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>  <span class="st">"浙江省"</span>,               <span class="st">"Zhejiang"</span>,</span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>  <span class="st">"安徽省"</span>,               <span class="st">"Anhui"</span>,</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>  <span class="st">"福建省"</span>,               <span class="st">"Fujian"</span>,</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>  <span class="st">"江西省"</span>,               <span class="st">"Jiangxi"</span>,</span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>  <span class="st">"山东省"</span>,               <span class="st">"Shandong"</span>,</span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>  <span class="st">"河南省"</span>,               <span class="st">"Henan"</span>,</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>  <span class="st">"湖北省"</span>,               <span class="st">"Hubei"</span>,</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>  <span class="st">"湖南省"</span>,               <span class="st">"Hunan"</span>,</span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>  <span class="st">"广东省"</span>,               <span class="st">"Guangdong"</span>,</span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>  <span class="st">"海南省"</span>,               <span class="st">"Hainan"</span>,</span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>  <span class="st">"四川省"</span>,               <span class="st">"Sichuan"</span>,</span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>  <span class="st">"贵州省"</span>,               <span class="st">"Guizhou"</span>,</span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>  <span class="st">"云南省"</span>,               <span class="st">"Yunnan"</span>,</span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>  <span class="st">"陕西省"</span>,               <span class="st">"Shaanxi"</span>,</span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>  <span class="st">"甘肃省"</span>,               <span class="st">"Gansu"</span>,</span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>  <span class="st">"青海省"</span>,               <span class="st">"Qinghai"</span>,</span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>  <span class="st">"台湾省"</span>,               <span class="st">"Taiwan"</span>,</span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>  <span class="st">"内蒙古自治区"</span>,         <span class="st">"Inner Mongolia"</span>,</span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>  <span class="st">"广西壮族自治区"</span>,       <span class="st">"Guangxi"</span>,</span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>  <span class="st">"西藏自治区"</span>,           <span class="st">"Tibet"</span>,</span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>  <span class="st">"宁夏回族自治区"</span>,       <span class="st">"Ningxia"</span>,</span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>  <span class="st">"新疆维吾尔自治区"</span>,     <span class="st">"Xinjiang"</span></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>panel_industry_increase <span class="ot">&lt;-</span> panel_industry_increase <span class="sc">%&gt;%</span></span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(province_lookup,</span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"Region"</span> <span class="ot">=</span> <span class="st">"Province"</span>)) </span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>panel_industry_increase <span class="ot">&lt;-</span> panel_industry_increase <span class="sc">%&gt;%</span></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span>                </span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">last_col</span>(), <span class="fu">everything</span>())</span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>panel_industry_increase <span class="ot">&lt;-</span> </span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_year</span>(panel_industry_increase)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Downloading Dataset 4</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The data set is about the growth rate of fixed asset.</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>url <span class="ot">=</span> <span class="st">"https://data.stats.gov.cn/easyquery.htm?cn=E0103"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># This data is about the growth rate of fixed asset. But unfortunately, the data dates from 2018 and is not comprehensive.</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>Growth_rate_of_fixed_asset <span class="ot">&lt;-</span> </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>               <span class="fu">read_csv</span>(<span class="st">"data/Growth_rate_of_fixed_asset(2018-2023).csv"</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>               <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">"GB18030"</span>),</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>               <span class="at">skip =</span> <span class="dv">3</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>Growth_rate_of_fixed_asset  <span class="ot">&lt;-</span> <span class="fu">head</span>(Growth_rate_of_fixed_asset,<span class="sc">-</span><span class="dv">1</span>) </span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>Growth_rate_of_fixed_asset <span class="ot">&lt;-</span> Growth_rate_of_fixed_asset <span class="sc">%&gt;%</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">where</span>(<span class="sc">~</span> <span class="sc">!</span><span class="fu">any</span>(<span class="fu">is.na</span>(.))))</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(Growth_rate_of_fixed_asset)[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">"Region"</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>Growth_rate_of_fixed_asset <span class="ot">&lt;-</span> Growth_rate_of_fixed_asset <span class="sc">%&gt;%</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(province_lookup,</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"Region"</span> <span class="ot">=</span> <span class="st">"Province"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span>                </span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">last_col</span>(), <span class="fu">everything</span>()) </span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>panel_growth_rate_of_fixed_asset <span class="ot">&lt;-</span> </span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  Growth_rate_of_fixed_asset<span class="sc">|&gt;</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">-</span>Province_EN,</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"Year"</span>,</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"growth_rate_of_fixed_asset"</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>  ) </span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>  panel_growth_rate_of_fixed_asset <span class="ot">&lt;-</span> <span class="fu">clean_year</span>(panel_growth_rate_of_fixed_asset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Downloading Dataset 5</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This data is about the urbanization rate in China.</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>url <span class="ot">=</span> <span class="st">"https://www.stats.gov.cn/sj/ndsj/2021/indexch.htm"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># this data is extracted from the China Satistical yearbook and it is downloaded manually.</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"data/urbanization_rate(2005-2012).csv"</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">skip =</span><span class="dv">2</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> </span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"data/urbanization_rate(2013-2023).csv"</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>urbanization_rate <span class="ot">&lt;-</span> </span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  df1 <span class="sc">|&gt;</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(df2, <span class="at">by=</span><span class="st">"Region"</span>)<span class="sc">|&gt;</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>panel_urbanization_rate <span class="ot">&lt;-</span> </span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  urbanization_rate<span class="sc">|&gt;</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">-</span><span class="st">"Region"</span>,</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"Year"</span>,</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"urbanization_rate"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Downloading Dataset 6</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#url = "http://www.moe.gov.cn/jyb_xxgk/xxgk/neirong/tongji/jytj_jftjgg/" </span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>Education_investment <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/education_investment(2001-2023).xlsx"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>Education_investment<span class="ot">&lt;-</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  Education_investment <span class="sc">|&gt;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="sc">-</span><span class="dv">1</span>)<span class="sc">|&gt;</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">Region =</span> <span class="st">`</span><span class="at">...1</span><span class="st">`</span> </span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>panel_education_investment <span class="ot">&lt;-</span> </span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  Education_investment<span class="sc">|&gt;</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">across</span>(</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>      <span class="at">.cols =</span> <span class="sc">-</span>Region,        </span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>      <span class="at">.fns  =</span> <span class="sc">~</span> <span class="fu">as.numeric</span>(.),</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>      <span class="at">.names =</span> <span class="st">"{.col}"</span>)        </span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols      =</span> <span class="sc">-</span>Region,</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to  =</span> <span class="st">"Year"</span>,</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"Education_investment"</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>panel_education_investment <span class="ot">&lt;-</span> panel_education_investment <span class="sc">%&gt;%</span></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(province_lookup,</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"Region"</span> <span class="ot">=</span> <span class="st">"Province"</span>)) </span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>panel_education_investment<span class="ot">&lt;-</span> panel_education_investment <span class="sc">%&gt;%</span></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span>                </span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">last_col</span>(), <span class="fu">everything</span>()) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Downloading Dataset 7</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#This data is about the degree of openness.It is the import and export volume of every province.</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>openness <span class="ot">&lt;-</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_excel</span>(<span class="st">"data/import_and_export_volume(1996-2023).xlsx"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>   <span class="fu">select</span>(<span class="sc">-</span>...<span class="dv">3</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>   <span class="fu">select</span>(<span class="sc">-</span>...<span class="dv">4</span>) </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(openness)[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">"Province_EN"</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(openness)[<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="st">"Year"</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(openness)[<span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="st">"Volume"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Downloading Dataset8</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this data is about the geographic information of each province in China, </span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">#to url = https://gadm.org/download_country.html</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># choose country =China， level=1. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Downloading Dataset 9</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#it is a html file and i have edited it manually.</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>province_location <span class="ot">&lt;-</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read.csv</span>(</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"data/province_location.csv"</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>province_location<span class="sc">$</span>zone<span class="ot">&lt;-</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">trimws</span>(province_location<span class="sc">$</span>zone)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>panel_all <span class="ot">&lt;-</span> </span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  panel_all <span class="sc">|&gt;</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    province_location,</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> <span class="st">"Region"</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<!-- Task 2 Tab: Writing your blogpost -->
+</section>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<section id="why-we-take-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="why-we-take-the-data">Why we take the data</h3>
+<p>In order to study whether the development of Chinese provinces is regional equilibrium or Matthew effect, we believe that it is crucial to capture the relationship between the GDP of each province and its GDP growth rate. However, after reading some literature, we found that there are many control variables that can affect the GDP growth rate, such as the growth rate of fixed asset investment, urbanization level, education investment level, and degree of opening up to the outside world. So we collected these data from the entire Internet to exclude their possible influence on our conclusions.</p>
+</section>
+<section id="data-source-for-it" class="level3">
+<h3 class="anchored" data-anchor-id="data-source-for-it">Data source for it</h3>
+<ol type="1">
+<li>Dataset 1,2,3,4,5,7,9 are all from the Chinese National Bureau of Statistics</li>
+<li>Dataset 6 are from the Ministry of Education</li>
+</ol>
+</section>
+<section id="what-the-data-tells-us" class="level3">
+<h3 class="anchored" data-anchor-id="what-the-data-tells-us">What the data tells us?</h3>
+<section id="data-processing" class="level4">
+<h4 class="anchored" data-anchor-id="data-processing">Data processing</h4>
+</section>
+<section id="exploratory-data-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="exploratory-data-analysis">Exploratory Data Analysis</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Assignment4_version4_files/figure-html/Time_series_comparison_of_typical_provinces-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This chart is about the Time series comparison of GDP_per_capita of typical provinces. As mentioned above, china has four zones, they are eastern, western, middle and north-eastern. Shandong is a province in eastern part. Henan is a province in the middle. Liaoning is a province in northeastern. Guizhou is a province in west. There is not enough evidence to conclude. However, the sample conveys the information that the GDP per capita increase steadily from 2000.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Reading layer `gadm41_CHN_1' from data source 
+  `/Users/shaocaoyu/Downloads/ETC5512_assignment4/data/gadm41_CHN_shp/gadm41_CHN_1.shp' 
+  using driver `ESRI Shapefile'
+Simple feature collection with 37 features and 11 fields
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: 73.5577 ymin: 18.15931 xmax: 134.7739 ymax: 53.56086
+Geodetic CRS:  WGS 84</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="china_gdp_per_capita.gif" class="img-fluid figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We could only find the number of residents in each province from 2000. So the GDP_per_capita starts from 2000. Some provinces’ data is not included like Hongkong , which is blank in the map.</p>
+<p>This gif is a heat map of the per capita GDP of each province. The darker the color, the higher the GDP per capita. The speed at which the color becomes darker means the speed at which the per capita GDP grows. We can see that since 2000, the color of the southeast coastal areas is obviously darker than that of the inland areas and it is becoming more and more obvious. However, after 2016, the inland areas have begun to darken again.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>               log_GDP_lag                      ratio 
+                  5.530884                   1.854480 
+         urbanization_rate                Trade_share 
+                  8.133084                   8.991902 
+                 Edu_share growth_rate_of_fixed_asset 
+                  5.136624                   1.082856 </code></pre>
+</div>
+</div>
+<p>The value of every variable is under 10. The main variable log_GDP_lag’s VIF value is 5.53.</p>
+</section>
+<section id="modeling-results" class="level4">
+<h4 class="anchored" data-anchor-id="modeling-results">Modeling &amp; Results</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Assignment4_version4_files/figure-html/Different_dispersion_index_by_year-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="explanation-for-different_dispersion_index_by_year" class="level5">
+<h5 class="anchored" data-anchor-id="explanation-for-different_dispersion_index_by_year">Explanation for different_dispersion_index_by_year</h5>
+<section id="cv_gdppc" class="level6">
+<h6 class="anchored" data-anchor-id="cv_gdppc">cv_gdppc</h6>
+<ul>
+<li><p>CV is the coefficient of Variation.</p></li>
+<li><p>cv_gdppc = sd(GDP_per_capita) / mean(GDP_per_capita)</p></li>
+<li><p>It means the relative degree of dispersion. The higher it is, the greater the gap in per capita GDP between different provinces.</p></li>
+</ul>
+</section>
+<section id="sd_log_gdppc" class="level6">
+<h6 class="anchored" data-anchor-id="sd_log_gdppc">sd_log_gdppc</h6>
+<ul>
+<li><p>It origines from taking the natural logarithm of each province’s per capita GDP and then calculating the standard deviation</p></li>
+<li><p>It can weaken the amplifying effect of extremely high values on differences and focus more on the relative differences in the middle range compared with CV.</p></li>
+<li><p>It means the relative degree of dispersion. The higher it is, the greater the gap in per capita GDP between different provinces.</p></li>
+</ul>
+</section>
+<section id="theil_gdppc" class="level6">
+<h6 class="anchored" data-anchor-id="theil_gdppc">theil_gdppc</h6>
+<ul>
+<li>Theil index is also an indicator of balance. The larger the index, the more unbalanced it is, and the smaller the index, the more balanced it is.</li>
+</ul>
+<p>In conclusion, different_dispersion_index_by_year tells us the convergence effect.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Twoways effects Within Model
+
+Call:
+plm(formula = GDP_per_capita_growth_rate ~ log_GDPpc_lag + ratio + 
+    urbanization_rate + Trade_share + Edu_share + growth_rate_of_fixed_asset, 
+    data = pdata, effect = "twoways", model = "within")
+
+Balanced Panel: n = 30, T = 6, N = 180
+
+Residuals:
+       Min.     1st Qu.      Median     3rd Qu.        Max. 
+-0.03661505 -0.00932847 -0.00071592  0.01009356  0.05865263 
+
+Coefficients:
+                              Estimate  Std. Error  t-value  Pr(&gt;|t|)    
+log_GDPpc_lag              -0.69816134  0.05705795 -12.2360 &lt; 2.2e-16 ***
+ratio                       0.30815615  0.02856454  10.7881 &lt; 2.2e-16 ***
+urbanization_rate           0.00413376  0.00260173   1.5888  0.114367    
+Trade_share                 1.10290946  0.33376603   3.3044  0.001211 ** 
+Edu_share                  -0.55720276  0.88242562  -0.6314  0.528787    
+growth_rate_of_fixed_asset  0.00024348  0.00015532   1.5676  0.119254    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Total Sum of Squares:    0.093843
+Residual Sum of Squares: 0.036721
+R-Squared:      0.6087
+Adj. R-Squared: 0.49609
+F-statistic: 36.037 on 6 and 139 DF, p-value: &lt; 2.22e-16</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 7
+  term                  estimate std.error statistic  p.value conf.low conf.high
+  &lt;chr&gt;                    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+1 log_GDPpc_lag         -6.98e-1  0.0571     -12.2   8.05e-24 -8.10e-1 -0.586   
+2 ratio                  3.08e-1  0.0286      10.8   4.33e-20  2.52e-1  0.364   
+3 urbanization_rate      4.13e-3  0.00260      1.59  1.14e- 1 -9.66e-4  0.00923 
+4 Trade_share            1.10e+0  0.334        3.30  1.21e- 3  4.49e-1  1.76    
+5 Edu_share             -5.57e-1  0.882       -0.631 5.29e- 1 -2.29e+0  1.17    
+6 growth_rate_of_fixed…  2.43e-4  0.000155     1.57  1.19e- 1 -6.09e-5  0.000548</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="explanation-for-panel_fixed_effects_regression" class="level5">
+<h5 class="anchored" data-anchor-id="explanation-for-panel_fixed_effects_regression">Explanation for panel_fixed_effects_regression</h5>
+<section id="log_gdppc_lag-β-0.6982-p-0.001." class="level6">
+<h6 class="anchored" data-anchor-id="log_gdppc_lag-β-0.6982-p-0.001.">log_GDPpc_lag (β = −0.6982, p &lt; 0.001).</h6>
+<ul>
+<li><p>It means a one‐unit increase in last year’s log per-capita GDP is associated with a 0.698-unitdecrease in the dependent variable.</p></li>
+<li><p>Highly statistically significant (p &lt; 0.001), indicating strong inverse persistence or convergence effect.</p></li>
+</ul>
+</section>
+<section id="ratio-β-0.3082-p-0.001" class="level6">
+<h6 class="anchored" data-anchor-id="ratio-β-0.3082-p-0.001">ratio (β = 0.3082, p &lt; 0.001)</h6>
+<ul>
+<li><p>A one‐unit rise in this “ratio” variable corresponds to a 0.308-unit increase in the outcome.</p></li>
+<li><p>Extremely significant (p&lt;0.001), showing a robust positive relationship.It indicates that when secondary industry increased more than tertiary industry, GDP_per_capita increases more.</p></li>
+</ul>
+</section>
+<section id="urbanization_rate-β-0.00413-p-0.114" class="level6">
+<h6 class="anchored" data-anchor-id="urbanization_rate-β-0.00413-p-0.114">urbanization_rate (β = 0.00413, p = 0.114)</h6>
+<ul>
+<li>Not statistically significant at the 5% level (p &gt; 0.05), so we cannot confidently assert an effect.</li>
+</ul>
+</section>
+<section id="trade_share-β-1.1029-p-0.01" class="level6">
+<h6 class="anchored" data-anchor-id="trade_share-β-1.1029-p-0.01">Trade_share (β = 1.1029, p &lt; 0.01)</h6>
+<ul>
+<li><p>A one‐percentage‐point increase in trade’s share of GDP predicts a 1.103-unit rise in the dependent variable.</p></li>
+<li><p>Statistically significant (p&lt;0.01), indicating that greater trade openness is positively associated with higher GDP_per_capita.</p></li>
+</ul>
+</section>
+<section id="edu_share-β-0.5572-p-0.529" class="level6">
+<h6 class="anchored" data-anchor-id="edu_share-β-0.5572-p-0.529">Edu_share (β = −0.5572, p = 0.529)</h6>
+<ul>
+<li>The effect is far from significant (p≈0.53), so there’s no evidence of a real impact here.</li>
+</ul>
+</section>
+<section id="growth_rate_of_fixed_asset-β-0.0002435-p-0.119" class="level6">
+<h6 class="anchored" data-anchor-id="growth_rate_of_fixed_asset-β-0.0002435-p-0.119">growth_rate_of_fixed_asset (β = 0.0002435, p = 0.119)</h6>
+<ul>
+<li>Also not significant (p &gt; 0.05), suggesting this variable does not meaningfully explain the variation.</li>
+</ul>
+<p>In our model, there is a convergence effect between provinces.</p>
+</section>
+</section>
+</section>
+<section id="convergence-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="convergence-analysis">Convergence Analysis</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Assignment4_version4_files/figure-html/σ%20convergence-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The picture is the standard deviation of logarithmic GDP of each province changes by the year. The higher sd, the more imbalanced the provinces are.</p>
+<ul>
+<li><p>From 1993 to 1997, we find the sd increase a lot.I think that is because Coastal provinces were the first to benefit from reform and opening up, foreign investment, and export-oriented economies, and their growth rates far exceeded those of inland provinces.</p></li>
+<li><p>From 1997-2003, we find it decrease a lot. We think that is because the 1997 Southeast Asian financial crisis caused serious damage to the export-oriented economies of the coastal areas. At the same time, the central and western provinces also began industrial transfer and infrastructure construction, narrowing the gap with the coastal areas.</p></li>
+<li><p>From 2003-2007, the eastern coastal areas have further expanded their lead in exports</p></li>
+<li><p>From 2008-2023, the global financial crisis in 2008 caused severe damage to the coastal economy. Due to the overall weakness of the domestic economy, the Chinese government began to accelerate investment and development in the central and western regions.</p></li>
+</ul>
+</section>
+</section>
+<section id="whats-really-under-the-surface" class="level3">
+<h3 class="anchored" data-anchor-id="whats-really-under-the-surface">What’s really under the surface?</h3>
+<p>The conclusion is that, from the perspective of GDP_per_capita, China is going to convergence.</p>
+<p>We believe that the reason why GDP per capita tends to be balanced is the free flow of various factors, mainly population. For example, people will move to places with higher GDP per capita, which allows them to create more value and obtain higher labor remuneration accordingly. At the same time, due to the large outflow of population in the original area, GDP per capita will also rise. For example, the manufacturing and tertiary industries in coastal provinces have absorbed a large number of inland labor forces. At the same time, the per capita factors in the inland have become enriched. Mechanized agriculture can be carried out in the vast areas of inland areas, which can greatly increase GDP per capita compared to primitive manual agriculture.</p>
+<!-- Task 3 Tab: Behind the Scenes -  -->
+</section>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<section id="whats-in-the-section" class="level3">
+<h3 class="anchored" data-anchor-id="whats-in-the-section">What’s in the section</h3>
+<section id="question-5" class="level4">
+<h4 class="anchored" data-anchor-id="question-5">Question 5</h4>
+<p><em>Tell us about a part(s) of your data processing or analysis that weren’t “sexy” and wouldn’t typically be included in a blog post. (e.g. Was their any data drudgery or time intensive wrangling? Were there any repetitive tasks or manual tasks? If it was easy, describe what made it easy?)</em></p>
+<p>As an indicator to measure the degree of openness of a region, the total import and export trade volume also encountered troubles during the collection process. I got this data from the China National Statistical Yearbook. There is no Excel link on the website for some years, so we finally used the manual input method. The data we use is about China, most of the data is downloaded from Chinese websites, and character conversion is also a problem.</p>
+</section>
+<section id="question-6" class="level4">
+<h4 class="anchored" data-anchor-id="question-6">Question 6</h4>
+<p><em>Were there any challenges that you faced in conducting this analysis. These may take the form of data limitations or coding challenges? (e.g. Was there anything in your analysis that you were not anticipating when you started? Did you have to change your intended scope?)</em></p>
+<p>When we first analyzed the Matthew effect or regional equilibrium, we used GDP and GDP growth rate. We believed that when the GDP growth rate was positively correlated with the total GDP, we could draw the conclusion of the Matthew effect. But later we found through empirical analysis that there is no such pattern. This is because China’s various provincial administrative regions were not evenly divided at the beginning. On the contrary, the two most developed cities in China, Beijing and Shanghai, have provincial administrative levels, but their administrative scope is very small, which leads to their economic totals not being at the forefront nationwide. If the Matthew effect is significant, these two cities must have the highest economic growth, but the data shows that the two regions ranked ninth (Shanghai) and eleventh (Beijing) have the highest economic growth. This obviously does not conform to our empirical analysis. So later we chose to use per capita GDP and its growth as indicators.</p>
+</section>
+<section id="question-7" class="level4">
+<h4 class="anchored" data-anchor-id="question-7">Question 7</h4>
+<p><em>Tell us about any imperfect parts of your work or how would like to expand this analysis in future? (We don’t expect you to solve everything in one assignment.)</em></p>
+<p>I hope i could add the robust test in the assignment to make sure the outcome is steady.</p>
+</section>
+<section id="question-8" class="level4">
+<h4 class="anchored" data-anchor-id="question-8">Question 8</h4>
+<p><em>Also submit 4 earlier versions of your assignment to show your iterative process. These should be your messy versions and include exploratory code. We recommend you save these files as you progress through your assignment. Provide a short overview for markers of what you fixed/learnt/improved/changed between each file. (If you are comfortable with GitHub you may submit your Github repo, but please refer to individual commits.)</em></p>
+<!-- Task 4 Tab: Appendix -  -->
+</section>
+</section>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<section id="packages-used-in-this-assignment" class="level3">
+<h3 class="anchored" data-anchor-id="packages-used-in-this-assignment">Packages used in this assignment</h3>
+<p><span class="citation" data-cites="tidyverse">Wickham et al. (<a href="#ref-tidyverse" role="doc-biblioref">2019</a>)</span> <span class="citation" data-cites="here">Müller (<a href="#ref-here" role="doc-biblioref">2020</a>)</span> <span class="citation" data-cites="sf_1">Pebesma &amp; Bivand (<a href="#ref-sf_1" role="doc-biblioref">2023</a>)</span> <span class="citation" data-cites="sf_2">Pebesma (<a href="#ref-sf_2" role="doc-biblioref">2018</a>)</span> <span class="citation" data-cites="patchwork">Pedersen (<a href="#ref-patchwork" role="doc-biblioref">2024</a>)</span> <span class="citation" data-cites="readr">Wickham, Hester, et al. (<a href="#ref-readr" role="doc-biblioref">2024</a>)</span> <span class="citation" data-cites="rvest">Wickham (<a href="#ref-rvest" role="doc-biblioref">2024</a>)</span> <span class="citation" data-cites="stringr">Wickham (<a href="#ref-stringr" role="doc-biblioref">2023</a>)</span> <span class="citation" data-cites="dplyr">Wickham et al. (<a href="#ref-dplyr" role="doc-biblioref">2023</a>)</span> <span class="citation" data-cites="tidyr">Wickham, Vaughan, et al. (<a href="#ref-tidyr" role="doc-biblioref">2024</a>)</span> <span class="citation" data-cites="readxl">Wickham &amp; Bryan (<a href="#ref-readxl" role="doc-biblioref">2025</a>)</span> <span class="citation" data-cites="tibble">Müller &amp; Wickham (<a href="#ref-tibble" role="doc-biblioref">2023</a>)</span> <span class="citation" data-cites="ggpmisc">Aphalo (<a href="#ref-ggpmisc" role="doc-biblioref">2024</a>)</span> <span class="citation" data-cites="ggplot2">Wickham (<a href="#ref-ggplot2" role="doc-biblioref">2016</a>)</span> <span class="citation" data-cites="viridis">Garnier et al. (<a href="#ref-viridis" role="doc-biblioref">2024</a>)</span> <span class="citation" data-cites="gganimate">Pedersen &amp; Robinson (<a href="#ref-gganimate" role="doc-biblioref">2024</a>)</span> <span class="citation" data-cites="car">Fox &amp; Weisberg (<a href="#ref-car" role="doc-biblioref">2019</a>)</span> <span class="citation" data-cites="olsrr">Hebbali (<a href="#ref-olsrr" role="doc-biblioref">2024</a>)</span> <span class="citation" data-cites="broom">Robinson et al. (<a href="#ref-broom" role="doc-biblioref">2025</a>)</span> <span class="citation" data-cites="plm_1">Croissant &amp; Millo (<a href="#ref-plm_1" role="doc-biblioref">2018</a>)</span> <span class="citation" data-cites="plm_2">Croissant &amp; Millo (<a href="#ref-plm_2" role="doc-biblioref">2008</a>)</span> <span class="citation" data-cites="plm_3">Millo (<a href="#ref-plm_3" role="doc-biblioref">2017</a>)</span> <span class="citation" data-cites="lmtest">Zeileis &amp; Hothorn (<a href="#ref-lmtest" role="doc-biblioref">2002</a>)</span> <span class="citation" data-cites="sandwich_1">Zeileis et al. (<a href="#ref-sandwich_1" role="doc-biblioref">2020</a>)</span> <span class="citation" data-cites="sandwich_2">Zeileis (<a href="#ref-sandwich_2" role="doc-biblioref">2004</a>)</span> <span class="citation" data-cites="sandwich_3">Zeileis (<a href="#ref-sandwich_3" role="doc-biblioref">2006</a>)</span></p>
+</section>
+<section id="code_used_in_assignment" class="level3">
+<h3 class="anchored" data-anchor-id="code_used_in_assignment">Code_used_in_assignment</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">echo =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">warning =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">message =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">include =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">fig.keep =</span> <span class="st">'asis'</span>)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tibble)</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpmisc)</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridis)</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gganimate)</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(olsrr)</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plm)</span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lmtest)   </span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sandwich) </span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a><span class="co"># pull data </span></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>url <span class="ot">=</span> <span class="st">"https://data.stats.gov.cn/english/easyquery.htm?cn=E0103"</span></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a><span class="co"># this data is about the number of residents in every province</span></span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>annual_residents <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(</span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">file =</span> <span class="st">"data/Annual_residents.csv"</span>,</span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>  <span class="at">header =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>  <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>  <span class="at">skip =</span> <span class="dv">3</span></span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a>annual_residents <span class="ot">&lt;-</span> <span class="fu">head</span>(annual_residents,<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>panel_residents <span class="ot">&lt;-</span> annual_residents <span class="sc">|&gt;</span></span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">-</span>Region,</span>
+<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"Year"</span>,</span>
+<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"Residents"</span></span>
+<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a>clean_year <span class="ot">&lt;-</span> </span>
+<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a>  <span class="cf">function</span>(df, <span class="at">year_col =</span> <span class="st">"Year"</span>) {</span>
+<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a>  df <span class="sc">|&gt;</span>     <span class="co">#extract the number of year</span></span>
+<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a>      <span class="at">Year =</span> <span class="fu">parse_number</span>(.data[[year_col]])</span>
+<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a><span class="co">#pull data </span></span>
+<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a>url <span class="ot">=</span> <span class="st">"https://data.stats.gov.cn/english/easyquery.htm?cn=E0103"</span></span>
+<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a><span class="co"># this data is about the GDP of each province </span></span>
+<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a>annual_gdp <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(</span>
+<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a>  <span class="at">file =</span> <span class="st">"data/Annual_gdp.csv"</span>,</span>
+<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a>  <span class="at">header =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a>  <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a>  <span class="at">skip =</span> <span class="dv">3</span></span>
+<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a>annual_gdp <span class="ot">&lt;-</span> <span class="fu">head</span>(annual_gdp,<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a>panel_gdp <span class="ot">&lt;-</span> annual_gdp <span class="sc">|&gt;</span></span>
+<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">-</span>Region,</span>
+<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span>   <span class="st">"Year"</span>,</span>
+<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"GDP"</span></span>
+<span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-75"><a href="#cb14-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-76"><a href="#cb14-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-77"><a href="#cb14-77" aria-hidden="true" tabindex="-1"></a>panel_all <span class="ot">&lt;-</span> </span>
+<span id="cb14-78"><a href="#cb14-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(</span>
+<span id="cb14-79"><a href="#cb14-79" aria-hidden="true" tabindex="-1"></a>    panel_gdp,</span>
+<span id="cb14-80"><a href="#cb14-80" aria-hidden="true" tabindex="-1"></a>    panel_residents,</span>
+<span id="cb14-81"><a href="#cb14-81" aria-hidden="true" tabindex="-1"></a>    <span class="at">by=</span> <span class="fu">c</span>(<span class="st">"Region"</span>,<span class="st">"Year"</span>)</span>
+<span id="cb14-82"><a href="#cb14-82" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-83"><a href="#cb14-83" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb14-84"><a href="#cb14-84" aria-hidden="true" tabindex="-1"></a>panel_all <span class="ot">&lt;-</span> </span>
+<span id="cb14-85"><a href="#cb14-85" aria-hidden="true" tabindex="-1"></a>   <span class="fu">mutate</span>(</span>
+<span id="cb14-86"><a href="#cb14-86" aria-hidden="true" tabindex="-1"></a>     panel_all,</span>
+<span id="cb14-87"><a href="#cb14-87" aria-hidden="true" tabindex="-1"></a>     <span class="st">"GDP_per_capita"</span> <span class="ot">=</span> GDP<span class="sc">/</span>Residents</span>
+<span id="cb14-88"><a href="#cb14-88" aria-hidden="true" tabindex="-1"></a>     )</span>
+<span id="cb14-89"><a href="#cb14-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-90"><a href="#cb14-90" aria-hidden="true" tabindex="-1"></a>panel_all <span class="ot">&lt;-</span> <span class="fu">clean_year</span>(panel_all)</span>
+<span id="cb14-91"><a href="#cb14-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-92"><a href="#cb14-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-93"><a href="#cb14-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-94"><a href="#cb14-94" aria-hidden="true" tabindex="-1"></a>panel_all <span class="ot">&lt;-</span> panel_all<span class="sc">|&gt;</span></span>
+<span id="cb14-95"><a href="#cb14-95" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Region,Year)<span class="sc">|&gt;</span></span>
+<span id="cb14-96"><a href="#cb14-96" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Region)<span class="sc">|&gt;</span></span>
+<span id="cb14-97"><a href="#cb14-97" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">GDP_prev =</span> dplyr<span class="sc">::</span><span class="fu">lag</span>(GDP),</span>
+<span id="cb14-98"><a href="#cb14-98" aria-hidden="true" tabindex="-1"></a>    <span class="at">GDP_growth_rate =</span> (GDP <span class="sc">-</span> GDP_prev)<span class="sc">/</span>GDP_prev,</span>
+<span id="cb14-99"><a href="#cb14-99" aria-hidden="true" tabindex="-1"></a>         <span class="at">GDPpc_prev =</span>dplyr<span class="sc">::</span><span class="fu">lag</span>(GDP_per_capita),</span>
+<span id="cb14-100"><a href="#cb14-100" aria-hidden="true" tabindex="-1"></a>    <span class="at">GDP_per_capita_growth_rate =</span>(GDP_per_capita <span class="sc">-</span> GDPpc_prev)<span class="sc">/</span>GDPpc_prev)</span>
+<span id="cb14-101"><a href="#cb14-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-102"><a href="#cb14-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-103"><a href="#cb14-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-104"><a href="#cb14-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-105"><a href="#cb14-105" aria-hidden="true" tabindex="-1"></a><span class="co"># This  data is the ratio of the added value of the tertiary</span></span>
+<span id="cb14-106"><a href="#cb14-106" aria-hidden="true" tabindex="-1"></a>  <span class="co">#    industry to the added value of the secondary industry</span></span>
+<span id="cb14-107"><a href="#cb14-107" aria-hidden="true" tabindex="-1"></a>   <span class="co">#   to measure the deep transformation of industrial structure.</span></span>
+<span id="cb14-108"><a href="#cb14-108" aria-hidden="true" tabindex="-1"></a>second_industry_increase <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb14-109"><a href="#cb14-109" aria-hidden="true" tabindex="-1"></a>  <span class="st">"data/second_industry_increase.csv"</span>,</span>
+<span id="cb14-110"><a href="#cb14-110" aria-hidden="true" tabindex="-1"></a>   <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">"GB18030"</span>),</span>
+<span id="cb14-111"><a href="#cb14-111" aria-hidden="true" tabindex="-1"></a>  <span class="at">skip=</span><span class="dv">3</span> )</span>
+<span id="cb14-112"><a href="#cb14-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-113"><a href="#cb14-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-114"><a href="#cb14-114" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(second_industry_increase)[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">"Region"</span></span>
+<span id="cb14-115"><a href="#cb14-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-116"><a href="#cb14-116" aria-hidden="true" tabindex="-1"></a>panel_second_industry_increase <span class="ot">&lt;-</span> </span>
+<span id="cb14-117"><a href="#cb14-117" aria-hidden="true" tabindex="-1"></a>  second_industry_increase<span class="sc">|&gt;</span></span>
+<span id="cb14-118"><a href="#cb14-118" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb14-119"><a href="#cb14-119" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">-</span>Region,</span>
+<span id="cb14-120"><a href="#cb14-120" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"Year"</span>,</span>
+<span id="cb14-121"><a href="#cb14-121" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"secondary_industry_increase"</span></span>
+<span id="cb14-122"><a href="#cb14-122" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-123"><a href="#cb14-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-124"><a href="#cb14-124" aria-hidden="true" tabindex="-1"></a>tertiary_industry_increase <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb14-125"><a href="#cb14-125" aria-hidden="true" tabindex="-1"></a>  <span class="st">"data/tertiary_industry_increase.csv"</span>,</span>
+<span id="cb14-126"><a href="#cb14-126" aria-hidden="true" tabindex="-1"></a>   <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">"GB18030"</span>),</span>
+<span id="cb14-127"><a href="#cb14-127" aria-hidden="true" tabindex="-1"></a>  <span class="at">skip=</span><span class="dv">3</span> )</span>
+<span id="cb14-128"><a href="#cb14-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-129"><a href="#cb14-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-130"><a href="#cb14-130" aria-hidden="true" tabindex="-1"></a> <span class="fu">names</span>(tertiary_industry_increase)[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">"Region"</span></span>
+<span id="cb14-131"><a href="#cb14-131" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb14-132"><a href="#cb14-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-133"><a href="#cb14-133" aria-hidden="true" tabindex="-1"></a>panel_tertiary_industry_increase <span class="ot">&lt;-</span> </span>
+<span id="cb14-134"><a href="#cb14-134" aria-hidden="true" tabindex="-1"></a>  tertiary_industry_increase<span class="sc">|&gt;</span></span>
+<span id="cb14-135"><a href="#cb14-135" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb14-136"><a href="#cb14-136" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">-</span>Region,</span>
+<span id="cb14-137"><a href="#cb14-137" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"Year"</span>,</span>
+<span id="cb14-138"><a href="#cb14-138" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"tertiary_industry_increase"</span></span>
+<span id="cb14-139"><a href="#cb14-139" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-140"><a href="#cb14-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-141"><a href="#cb14-141" aria-hidden="true" tabindex="-1"></a>panel_industry_increase <span class="ot">&lt;-</span> </span>
+<span id="cb14-142"><a href="#cb14-142" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(</span>
+<span id="cb14-143"><a href="#cb14-143" aria-hidden="true" tabindex="-1"></a>    panel_second_industry_increase,</span>
+<span id="cb14-144"><a href="#cb14-144" aria-hidden="true" tabindex="-1"></a>    panel_tertiary_industry_increase,</span>
+<span id="cb14-145"><a href="#cb14-145" aria-hidden="true" tabindex="-1"></a>    <span class="at">by=</span><span class="fu">c</span>(<span class="st">"Region"</span>,<span class="st">"Year"</span>)</span>
+<span id="cb14-146"><a href="#cb14-146" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(</span>
+<span id="cb14-147"><a href="#cb14-147" aria-hidden="true" tabindex="-1"></a>      <span class="at">ratio =</span>secondary_industry_increase<span class="sc">/</span>tertiary_industry_increase</span>
+<span id="cb14-148"><a href="#cb14-148" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb14-149"><a href="#cb14-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-150"><a href="#cb14-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-151"><a href="#cb14-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-152"><a href="#cb14-152" aria-hidden="true" tabindex="-1"></a>province_lookup <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb14-153"><a href="#cb14-153" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>Province,             <span class="sc">~</span>Province_EN,</span>
+<span id="cb14-154"><a href="#cb14-154" aria-hidden="true" tabindex="-1"></a>  <span class="st">"北京市"</span>,               <span class="st">"Beijing"</span>,</span>
+<span id="cb14-155"><a href="#cb14-155" aria-hidden="true" tabindex="-1"></a>  <span class="st">"天津市"</span>,               <span class="st">"Tianjin"</span>,</span>
+<span id="cb14-156"><a href="#cb14-156" aria-hidden="true" tabindex="-1"></a>  <span class="st">"上海市"</span>,               <span class="st">"Shanghai"</span>,</span>
+<span id="cb14-157"><a href="#cb14-157" aria-hidden="true" tabindex="-1"></a>  <span class="st">"重庆市"</span>,               <span class="st">"Chongqing"</span>,</span>
+<span id="cb14-158"><a href="#cb14-158" aria-hidden="true" tabindex="-1"></a>  <span class="st">"河北省"</span>,               <span class="st">"Hebei"</span>,</span>
+<span id="cb14-159"><a href="#cb14-159" aria-hidden="true" tabindex="-1"></a>  <span class="st">"山西省"</span>,               <span class="st">"Shanxi"</span>,</span>
+<span id="cb14-160"><a href="#cb14-160" aria-hidden="true" tabindex="-1"></a>  <span class="st">"辽宁省"</span>,               <span class="st">"Liaoning"</span>,</span>
+<span id="cb14-161"><a href="#cb14-161" aria-hidden="true" tabindex="-1"></a>  <span class="st">"吉林省"</span>,               <span class="st">"Jilin"</span>,</span>
+<span id="cb14-162"><a href="#cb14-162" aria-hidden="true" tabindex="-1"></a>  <span class="st">"黑龙江省"</span>,             <span class="st">"Heilongjiang"</span>,</span>
+<span id="cb14-163"><a href="#cb14-163" aria-hidden="true" tabindex="-1"></a>  <span class="st">"江苏省"</span>,               <span class="st">"Jiangsu"</span>,</span>
+<span id="cb14-164"><a href="#cb14-164" aria-hidden="true" tabindex="-1"></a>  <span class="st">"浙江省"</span>,               <span class="st">"Zhejiang"</span>,</span>
+<span id="cb14-165"><a href="#cb14-165" aria-hidden="true" tabindex="-1"></a>  <span class="st">"安徽省"</span>,               <span class="st">"Anhui"</span>,</span>
+<span id="cb14-166"><a href="#cb14-166" aria-hidden="true" tabindex="-1"></a>  <span class="st">"福建省"</span>,               <span class="st">"Fujian"</span>,</span>
+<span id="cb14-167"><a href="#cb14-167" aria-hidden="true" tabindex="-1"></a>  <span class="st">"江西省"</span>,               <span class="st">"Jiangxi"</span>,</span>
+<span id="cb14-168"><a href="#cb14-168" aria-hidden="true" tabindex="-1"></a>  <span class="st">"山东省"</span>,               <span class="st">"Shandong"</span>,</span>
+<span id="cb14-169"><a href="#cb14-169" aria-hidden="true" tabindex="-1"></a>  <span class="st">"河南省"</span>,               <span class="st">"Henan"</span>,</span>
+<span id="cb14-170"><a href="#cb14-170" aria-hidden="true" tabindex="-1"></a>  <span class="st">"湖北省"</span>,               <span class="st">"Hubei"</span>,</span>
+<span id="cb14-171"><a href="#cb14-171" aria-hidden="true" tabindex="-1"></a>  <span class="st">"湖南省"</span>,               <span class="st">"Hunan"</span>,</span>
+<span id="cb14-172"><a href="#cb14-172" aria-hidden="true" tabindex="-1"></a>  <span class="st">"广东省"</span>,               <span class="st">"Guangdong"</span>,</span>
+<span id="cb14-173"><a href="#cb14-173" aria-hidden="true" tabindex="-1"></a>  <span class="st">"海南省"</span>,               <span class="st">"Hainan"</span>,</span>
+<span id="cb14-174"><a href="#cb14-174" aria-hidden="true" tabindex="-1"></a>  <span class="st">"四川省"</span>,               <span class="st">"Sichuan"</span>,</span>
+<span id="cb14-175"><a href="#cb14-175" aria-hidden="true" tabindex="-1"></a>  <span class="st">"贵州省"</span>,               <span class="st">"Guizhou"</span>,</span>
+<span id="cb14-176"><a href="#cb14-176" aria-hidden="true" tabindex="-1"></a>  <span class="st">"云南省"</span>,               <span class="st">"Yunnan"</span>,</span>
+<span id="cb14-177"><a href="#cb14-177" aria-hidden="true" tabindex="-1"></a>  <span class="st">"陕西省"</span>,               <span class="st">"Shaanxi"</span>,</span>
+<span id="cb14-178"><a href="#cb14-178" aria-hidden="true" tabindex="-1"></a>  <span class="st">"甘肃省"</span>,               <span class="st">"Gansu"</span>,</span>
+<span id="cb14-179"><a href="#cb14-179" aria-hidden="true" tabindex="-1"></a>  <span class="st">"青海省"</span>,               <span class="st">"Qinghai"</span>,</span>
+<span id="cb14-180"><a href="#cb14-180" aria-hidden="true" tabindex="-1"></a>  <span class="st">"台湾省"</span>,               <span class="st">"Taiwan"</span>,</span>
+<span id="cb14-181"><a href="#cb14-181" aria-hidden="true" tabindex="-1"></a>  <span class="st">"内蒙古自治区"</span>,         <span class="st">"Inner Mongolia"</span>,</span>
+<span id="cb14-182"><a href="#cb14-182" aria-hidden="true" tabindex="-1"></a>  <span class="st">"广西壮族自治区"</span>,       <span class="st">"Guangxi"</span>,</span>
+<span id="cb14-183"><a href="#cb14-183" aria-hidden="true" tabindex="-1"></a>  <span class="st">"西藏自治区"</span>,           <span class="st">"Tibet"</span>,</span>
+<span id="cb14-184"><a href="#cb14-184" aria-hidden="true" tabindex="-1"></a>  <span class="st">"宁夏回族自治区"</span>,       <span class="st">"Ningxia"</span>,</span>
+<span id="cb14-185"><a href="#cb14-185" aria-hidden="true" tabindex="-1"></a>  <span class="st">"新疆维吾尔自治区"</span>,     <span class="st">"Xinjiang"</span></span>
+<span id="cb14-186"><a href="#cb14-186" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-187"><a href="#cb14-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-188"><a href="#cb14-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-189"><a href="#cb14-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-190"><a href="#cb14-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-191"><a href="#cb14-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-192"><a href="#cb14-192" aria-hidden="true" tabindex="-1"></a>panel_industry_increase <span class="ot">&lt;-</span> panel_industry_increase <span class="sc">%&gt;%</span></span>
+<span id="cb14-193"><a href="#cb14-193" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(province_lookup,</span>
+<span id="cb14-194"><a href="#cb14-194" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"Region"</span> <span class="ot">=</span> <span class="st">"Province"</span>)) </span>
+<span id="cb14-195"><a href="#cb14-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-196"><a href="#cb14-196" aria-hidden="true" tabindex="-1"></a>panel_industry_increase <span class="ot">&lt;-</span> panel_industry_increase <span class="sc">%&gt;%</span></span>
+<span id="cb14-197"><a href="#cb14-197" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span>                </span>
+<span id="cb14-198"><a href="#cb14-198" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">last_col</span>(), <span class="fu">everything</span>())</span>
+<span id="cb14-199"><a href="#cb14-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-200"><a href="#cb14-200" aria-hidden="true" tabindex="-1"></a>panel_industry_increase <span class="ot">&lt;-</span> </span>
+<span id="cb14-201"><a href="#cb14-201" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_year</span>(panel_industry_increase)</span>
+<span id="cb14-202"><a href="#cb14-202" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-203"><a href="#cb14-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-204"><a href="#cb14-204" aria-hidden="true" tabindex="-1"></a><span class="co"># The data set is about the growth rate of fixed asset.</span></span>
+<span id="cb14-205"><a href="#cb14-205" aria-hidden="true" tabindex="-1"></a>url <span class="ot">=</span> <span class="st">"https://data.stats.gov.cn/easyquery.htm?cn=E0103"</span></span>
+<span id="cb14-206"><a href="#cb14-206" aria-hidden="true" tabindex="-1"></a><span class="co"># This data is about the growth rate of fixed asset. But unfortunately, the data dates from 2018 and is not comprehensive.</span></span>
+<span id="cb14-207"><a href="#cb14-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-208"><a href="#cb14-208" aria-hidden="true" tabindex="-1"></a>Growth_rate_of_fixed_asset <span class="ot">&lt;-</span> </span>
+<span id="cb14-209"><a href="#cb14-209" aria-hidden="true" tabindex="-1"></a>               <span class="fu">read_csv</span>(<span class="st">"data/Growth_rate_of_fixed_asset(2018-2023).csv"</span>,</span>
+<span id="cb14-210"><a href="#cb14-210" aria-hidden="true" tabindex="-1"></a>               <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">"GB18030"</span>),</span>
+<span id="cb14-211"><a href="#cb14-211" aria-hidden="true" tabindex="-1"></a>               <span class="at">skip =</span> <span class="dv">3</span>)</span>
+<span id="cb14-212"><a href="#cb14-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-213"><a href="#cb14-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-214"><a href="#cb14-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-215"><a href="#cb14-215" aria-hidden="true" tabindex="-1"></a>Growth_rate_of_fixed_asset  <span class="ot">&lt;-</span> <span class="fu">head</span>(Growth_rate_of_fixed_asset,<span class="sc">-</span><span class="dv">1</span>) </span>
+<span id="cb14-216"><a href="#cb14-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-217"><a href="#cb14-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-218"><a href="#cb14-218" aria-hidden="true" tabindex="-1"></a>Growth_rate_of_fixed_asset <span class="ot">&lt;-</span> Growth_rate_of_fixed_asset <span class="sc">%&gt;%</span></span>
+<span id="cb14-219"><a href="#cb14-219" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">where</span>(<span class="sc">~</span> <span class="sc">!</span><span class="fu">any</span>(<span class="fu">is.na</span>(.))))</span>
+<span id="cb14-220"><a href="#cb14-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-221"><a href="#cb14-221" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(Growth_rate_of_fixed_asset)[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">"Region"</span></span>
+<span id="cb14-222"><a href="#cb14-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-223"><a href="#cb14-223" aria-hidden="true" tabindex="-1"></a>Growth_rate_of_fixed_asset <span class="ot">&lt;-</span> Growth_rate_of_fixed_asset <span class="sc">%&gt;%</span></span>
+<span id="cb14-224"><a href="#cb14-224" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(province_lookup,</span>
+<span id="cb14-225"><a href="#cb14-225" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"Region"</span> <span class="ot">=</span> <span class="st">"Province"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb14-226"><a href="#cb14-226" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span>                </span>
+<span id="cb14-227"><a href="#cb14-227" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">last_col</span>(), <span class="fu">everything</span>()) </span>
+<span id="cb14-228"><a href="#cb14-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-229"><a href="#cb14-229" aria-hidden="true" tabindex="-1"></a>panel_growth_rate_of_fixed_asset <span class="ot">&lt;-</span> </span>
+<span id="cb14-230"><a href="#cb14-230" aria-hidden="true" tabindex="-1"></a>  Growth_rate_of_fixed_asset<span class="sc">|&gt;</span></span>
+<span id="cb14-231"><a href="#cb14-231" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb14-232"><a href="#cb14-232" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">-</span>Province_EN,</span>
+<span id="cb14-233"><a href="#cb14-233" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"Year"</span>,</span>
+<span id="cb14-234"><a href="#cb14-234" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"growth_rate_of_fixed_asset"</span></span>
+<span id="cb14-235"><a href="#cb14-235" aria-hidden="true" tabindex="-1"></a>  ) </span>
+<span id="cb14-236"><a href="#cb14-236" aria-hidden="true" tabindex="-1"></a>  panel_growth_rate_of_fixed_asset <span class="ot">&lt;-</span> <span class="fu">clean_year</span>(panel_growth_rate_of_fixed_asset)</span>
+<span id="cb14-237"><a href="#cb14-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-238"><a href="#cb14-238" aria-hidden="true" tabindex="-1"></a><span class="co"># This data is about the urbanization rate in China.</span></span>
+<span id="cb14-239"><a href="#cb14-239" aria-hidden="true" tabindex="-1"></a>url <span class="ot">=</span> <span class="st">"https://www.stats.gov.cn/sj/ndsj/2021/indexch.htm"</span></span>
+<span id="cb14-240"><a href="#cb14-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-241"><a href="#cb14-241" aria-hidden="true" tabindex="-1"></a><span class="co"># this data is extracted from the China Satistical yearbook and it is downloaded manually.</span></span>
+<span id="cb14-242"><a href="#cb14-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-243"><a href="#cb14-243" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> </span>
+<span id="cb14-244"><a href="#cb14-244" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(</span>
+<span id="cb14-245"><a href="#cb14-245" aria-hidden="true" tabindex="-1"></a>    <span class="st">"data/urbanization_rate(2005-2012).csv"</span>,</span>
+<span id="cb14-246"><a href="#cb14-246" aria-hidden="true" tabindex="-1"></a>    <span class="at">skip =</span><span class="dv">2</span></span>
+<span id="cb14-247"><a href="#cb14-247" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb14-248"><a href="#cb14-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-249"><a href="#cb14-249" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> </span>
+<span id="cb14-250"><a href="#cb14-250" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(</span>
+<span id="cb14-251"><a href="#cb14-251" aria-hidden="true" tabindex="-1"></a>    <span class="st">"data/urbanization_rate(2013-2023).csv"</span></span>
+<span id="cb14-252"><a href="#cb14-252" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb14-253"><a href="#cb14-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-254"><a href="#cb14-254" aria-hidden="true" tabindex="-1"></a>urbanization_rate <span class="ot">&lt;-</span> </span>
+<span id="cb14-255"><a href="#cb14-255" aria-hidden="true" tabindex="-1"></a>  df1 <span class="sc">|&gt;</span></span>
+<span id="cb14-256"><a href="#cb14-256" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(df2, <span class="at">by=</span><span class="st">"Region"</span>)<span class="sc">|&gt;</span></span>
+<span id="cb14-257"><a href="#cb14-257" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb14-258"><a href="#cb14-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-259"><a href="#cb14-259" aria-hidden="true" tabindex="-1"></a>panel_urbanization_rate <span class="ot">&lt;-</span> </span>
+<span id="cb14-260"><a href="#cb14-260" aria-hidden="true" tabindex="-1"></a>  urbanization_rate<span class="sc">|&gt;</span></span>
+<span id="cb14-261"><a href="#cb14-261" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb14-262"><a href="#cb14-262" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">-</span><span class="st">"Region"</span>,</span>
+<span id="cb14-263"><a href="#cb14-263" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"Year"</span>,</span>
+<span id="cb14-264"><a href="#cb14-264" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"urbanization_rate"</span>)</span>
+<span id="cb14-265"><a href="#cb14-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-266"><a href="#cb14-266" aria-hidden="true" tabindex="-1"></a><span class="co">#url = "http://www.moe.gov.cn/jyb_xxgk/xxgk/neirong/tongji/jytj_jftjgg/" </span></span>
+<span id="cb14-267"><a href="#cb14-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-268"><a href="#cb14-268" aria-hidden="true" tabindex="-1"></a>Education_investment <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/education_investment(2001-2023).xlsx"</span>)</span>
+<span id="cb14-269"><a href="#cb14-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-270"><a href="#cb14-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-271"><a href="#cb14-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-272"><a href="#cb14-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-273"><a href="#cb14-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-274"><a href="#cb14-274" aria-hidden="true" tabindex="-1"></a>Education_investment<span class="ot">&lt;-</span></span>
+<span id="cb14-275"><a href="#cb14-275" aria-hidden="true" tabindex="-1"></a>  Education_investment <span class="sc">|&gt;</span></span>
+<span id="cb14-276"><a href="#cb14-276" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="sc">-</span><span class="dv">1</span>)<span class="sc">|&gt;</span></span>
+<span id="cb14-277"><a href="#cb14-277" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(</span>
+<span id="cb14-278"><a href="#cb14-278" aria-hidden="true" tabindex="-1"></a>    <span class="at">Region =</span> <span class="st">`</span><span class="at">...1</span><span class="st">`</span> </span>
+<span id="cb14-279"><a href="#cb14-279" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-280"><a href="#cb14-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-281"><a href="#cb14-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-282"><a href="#cb14-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-283"><a href="#cb14-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-284"><a href="#cb14-284" aria-hidden="true" tabindex="-1"></a>panel_education_investment <span class="ot">&lt;-</span> </span>
+<span id="cb14-285"><a href="#cb14-285" aria-hidden="true" tabindex="-1"></a>  Education_investment<span class="sc">|&gt;</span></span>
+<span id="cb14-286"><a href="#cb14-286" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb14-287"><a href="#cb14-287" aria-hidden="true" tabindex="-1"></a>    <span class="fu">across</span>(</span>
+<span id="cb14-288"><a href="#cb14-288" aria-hidden="true" tabindex="-1"></a>      <span class="at">.cols =</span> <span class="sc">-</span>Region,        </span>
+<span id="cb14-289"><a href="#cb14-289" aria-hidden="true" tabindex="-1"></a>      <span class="at">.fns  =</span> <span class="sc">~</span> <span class="fu">as.numeric</span>(.),</span>
+<span id="cb14-290"><a href="#cb14-290" aria-hidden="true" tabindex="-1"></a>      <span class="at">.names =</span> <span class="st">"{.col}"</span>)        </span>
+<span id="cb14-291"><a href="#cb14-291" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb14-292"><a href="#cb14-292" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb14-293"><a href="#cb14-293" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols      =</span> <span class="sc">-</span>Region,</span>
+<span id="cb14-294"><a href="#cb14-294" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to  =</span> <span class="st">"Year"</span>,</span>
+<span id="cb14-295"><a href="#cb14-295" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"Education_investment"</span></span>
+<span id="cb14-296"><a href="#cb14-296" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-297"><a href="#cb14-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-298"><a href="#cb14-298" aria-hidden="true" tabindex="-1"></a>panel_education_investment <span class="ot">&lt;-</span> panel_education_investment <span class="sc">%&gt;%</span></span>
+<span id="cb14-299"><a href="#cb14-299" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(province_lookup,</span>
+<span id="cb14-300"><a href="#cb14-300" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"Region"</span> <span class="ot">=</span> <span class="st">"Province"</span>)) </span>
+<span id="cb14-301"><a href="#cb14-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-302"><a href="#cb14-302" aria-hidden="true" tabindex="-1"></a>panel_education_investment<span class="ot">&lt;-</span> panel_education_investment <span class="sc">%&gt;%</span></span>
+<span id="cb14-303"><a href="#cb14-303" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span>                </span>
+<span id="cb14-304"><a href="#cb14-304" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">last_col</span>(), <span class="fu">everything</span>()) </span>
+<span id="cb14-305"><a href="#cb14-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-306"><a href="#cb14-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-307"><a href="#cb14-307" aria-hidden="true" tabindex="-1"></a><span class="co">#This data is about the degree of openness.It is the import and export volume of every province.</span></span>
+<span id="cb14-308"><a href="#cb14-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-309"><a href="#cb14-309" aria-hidden="true" tabindex="-1"></a>openness <span class="ot">&lt;-</span></span>
+<span id="cb14-310"><a href="#cb14-310" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_excel</span>(<span class="st">"data/import_and_export_volume(1996-2023).xlsx"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-311"><a href="#cb14-311" aria-hidden="true" tabindex="-1"></a>   <span class="fu">select</span>(<span class="sc">-</span>...<span class="dv">3</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb14-312"><a href="#cb14-312" aria-hidden="true" tabindex="-1"></a>   <span class="fu">select</span>(<span class="sc">-</span>...<span class="dv">4</span>) </span>
+<span id="cb14-313"><a href="#cb14-313" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb14-314"><a href="#cb14-314" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(openness)[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">"Province_EN"</span></span>
+<span id="cb14-315"><a href="#cb14-315" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(openness)[<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="st">"Year"</span></span>
+<span id="cb14-316"><a href="#cb14-316" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(openness)[<span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="st">"Volume"</span></span>
+<span id="cb14-317"><a href="#cb14-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-318"><a href="#cb14-318" aria-hidden="true" tabindex="-1"></a><span class="co"># this data is about the geographic information of each province in China, </span></span>
+<span id="cb14-319"><a href="#cb14-319" aria-hidden="true" tabindex="-1"></a><span class="co">#to url = https://gadm.org/download_country.html</span></span>
+<span id="cb14-320"><a href="#cb14-320" aria-hidden="true" tabindex="-1"></a><span class="co"># choose country =China， level=1. </span></span>
+<span id="cb14-321"><a href="#cb14-321" aria-hidden="true" tabindex="-1"></a><span class="co">#it is a html file and i have edited it manually.</span></span>
+<span id="cb14-322"><a href="#cb14-322" aria-hidden="true" tabindex="-1"></a>province_location <span class="ot">&lt;-</span></span>
+<span id="cb14-323"><a href="#cb14-323" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read.csv</span>(</span>
+<span id="cb14-324"><a href="#cb14-324" aria-hidden="true" tabindex="-1"></a>    <span class="st">"data/province_location.csv"</span></span>
+<span id="cb14-325"><a href="#cb14-325" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb14-326"><a href="#cb14-326" aria-hidden="true" tabindex="-1"></a>province_location<span class="sc">$</span>zone<span class="ot">&lt;-</span></span>
+<span id="cb14-327"><a href="#cb14-327" aria-hidden="true" tabindex="-1"></a>  <span class="fu">trimws</span>(province_location<span class="sc">$</span>zone)</span>
+<span id="cb14-328"><a href="#cb14-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-329"><a href="#cb14-329" aria-hidden="true" tabindex="-1"></a>panel_all <span class="ot">&lt;-</span> </span>
+<span id="cb14-330"><a href="#cb14-330" aria-hidden="true" tabindex="-1"></a>  panel_all <span class="sc">|&gt;</span></span>
+<span id="cb14-331"><a href="#cb14-331" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(</span>
+<span id="cb14-332"><a href="#cb14-332" aria-hidden="true" tabindex="-1"></a>    province_location,</span>
+<span id="cb14-333"><a href="#cb14-333" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> <span class="st">"Region"</span></span>
+<span id="cb14-334"><a href="#cb14-334" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb14-335"><a href="#cb14-335" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-336"><a href="#cb14-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-337"><a href="#cb14-337" aria-hidden="true" tabindex="-1"></a>panel_all <span class="ot">&lt;-</span> panel_all <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">Year =</span> <span class="fu">as.character</span>(Year))</span>
+<span id="cb14-338"><a href="#cb14-338" aria-hidden="true" tabindex="-1"></a>panel_industry_increase <span class="ot">&lt;-</span> panel_industry_increase <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">Year =</span> <span class="fu">as.character</span>(Year))</span>
+<span id="cb14-339"><a href="#cb14-339" aria-hidden="true" tabindex="-1"></a>panel_growth_rate_of_fixed_asset <span class="ot">&lt;-</span> panel_growth_rate_of_fixed_asset<span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">Year =</span><span class="fu">as.character</span>(Year))</span>
+<span id="cb14-340"><a href="#cb14-340" aria-hidden="true" tabindex="-1"></a>panel_urbanization_rate <span class="ot">&lt;-</span> panel_urbanization_rate <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">Year =</span> <span class="fu">as.character</span>(Year))</span>
+<span id="cb14-341"><a href="#cb14-341" aria-hidden="true" tabindex="-1"></a>panel_education_investment <span class="ot">&lt;-</span> panel_education_investment<span class="sc">|&gt;</span><span class="fu">mutate</span>(<span class="at">Year=</span><span class="fu">as.character</span>(Year))</span>
+<span id="cb14-342"><a href="#cb14-342" aria-hidden="true" tabindex="-1"></a>openness <span class="ot">&lt;-</span> openness<span class="sc">|&gt;</span><span class="fu">mutate</span>(<span class="at">Year =</span><span class="fu">as.character</span>(Year))</span>
+<span id="cb14-343"><a href="#cb14-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-344"><a href="#cb14-344" aria-hidden="true" tabindex="-1"></a>panel_all <span class="ot">&lt;-</span> </span>
+<span id="cb14-345"><a href="#cb14-345" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(</span>
+<span id="cb14-346"><a href="#cb14-346" aria-hidden="true" tabindex="-1"></a>    panel_all,</span>
+<span id="cb14-347"><a href="#cb14-347" aria-hidden="true" tabindex="-1"></a>    panel_industry_increase,</span>
+<span id="cb14-348"><a href="#cb14-348" aria-hidden="true" tabindex="-1"></a>    <span class="at">by=</span><span class="fu">c</span>(<span class="st">"Region"</span> <span class="ot">=</span> <span class="st">"Province_EN"</span>,</span>
+<span id="cb14-349"><a href="#cb14-349" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Year"</span> )</span>
+<span id="cb14-350"><a href="#cb14-350" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb14-351"><a href="#cb14-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-352"><a href="#cb14-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-353"><a href="#cb14-353" aria-hidden="true" tabindex="-1"></a>panel_all <span class="ot">&lt;-</span> </span>
+<span id="cb14-354"><a href="#cb14-354" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(</span>
+<span id="cb14-355"><a href="#cb14-355" aria-hidden="true" tabindex="-1"></a>    panel_all,</span>
+<span id="cb14-356"><a href="#cb14-356" aria-hidden="true" tabindex="-1"></a>    panel_growth_rate_of_fixed_asset,</span>
+<span id="cb14-357"><a href="#cb14-357" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span><span class="fu">c</span>(<span class="st">"Region"</span><span class="ot">=</span> <span class="st">"Province_EN"</span>,</span>
+<span id="cb14-358"><a href="#cb14-358" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Year"</span>)</span>
+<span id="cb14-359"><a href="#cb14-359" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-360"><a href="#cb14-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-361"><a href="#cb14-361" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-362"><a href="#cb14-362" aria-hidden="true" tabindex="-1"></a>panel_all <span class="ot">&lt;-</span> </span>
+<span id="cb14-363"><a href="#cb14-363" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(</span>
+<span id="cb14-364"><a href="#cb14-364" aria-hidden="true" tabindex="-1"></a>    panel_all,</span>
+<span id="cb14-365"><a href="#cb14-365" aria-hidden="true" tabindex="-1"></a>    panel_urbanization_rate,</span>
+<span id="cb14-366"><a href="#cb14-366" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span><span class="fu">c</span>(<span class="st">"Region"</span>,</span>
+<span id="cb14-367"><a href="#cb14-367" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Year"</span>)</span>
+<span id="cb14-368"><a href="#cb14-368" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-369"><a href="#cb14-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-370"><a href="#cb14-370" aria-hidden="true" tabindex="-1"></a>panel_all <span class="ot">&lt;-</span> </span>
+<span id="cb14-371"><a href="#cb14-371" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(</span>
+<span id="cb14-372"><a href="#cb14-372" aria-hidden="true" tabindex="-1"></a>    panel_all,</span>
+<span id="cb14-373"><a href="#cb14-373" aria-hidden="true" tabindex="-1"></a>    panel_education_investment,</span>
+<span id="cb14-374"><a href="#cb14-374" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span><span class="fu">c</span>(<span class="st">"Region"</span><span class="ot">=</span> <span class="st">"Province_EN"</span>,</span>
+<span id="cb14-375"><a href="#cb14-375" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Year"</span>)</span>
+<span id="cb14-376"><a href="#cb14-376" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-377"><a href="#cb14-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-378"><a href="#cb14-378" aria-hidden="true" tabindex="-1"></a>panel_all <span class="ot">&lt;-</span> </span>
+<span id="cb14-379"><a href="#cb14-379" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(</span>
+<span id="cb14-380"><a href="#cb14-380" aria-hidden="true" tabindex="-1"></a>    panel_all,</span>
+<span id="cb14-381"><a href="#cb14-381" aria-hidden="true" tabindex="-1"></a>    openness,</span>
+<span id="cb14-382"><a href="#cb14-382" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span><span class="fu">c</span>(<span class="st">"Region"</span><span class="ot">=</span><span class="st">"Province_EN"</span>,</span>
+<span id="cb14-383"><a href="#cb14-383" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Year"</span>)</span>
+<span id="cb14-384"><a href="#cb14-384" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-385"><a href="#cb14-385" aria-hidden="true" tabindex="-1"></a>panel_all <span class="ot">&lt;-</span> </span>
+<span id="cb14-386"><a href="#cb14-386" aria-hidden="true" tabindex="-1"></a>  panel_all<span class="sc">|&gt;</span></span>
+<span id="cb14-387"><a href="#cb14-387" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Year =</span><span class="fu">as.integer</span>(Year))<span class="sc">|&gt;</span></span>
+<span id="cb14-388"><a href="#cb14-388" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Region,Year) <span class="sc">|&gt;</span></span>
+<span id="cb14-389"><a href="#cb14-389" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Region)<span class="sc">|&gt;</span></span>
+<span id="cb14-390"><a href="#cb14-390" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb14-391"><a href="#cb14-391" aria-hidden="true" tabindex="-1"></a>    <span class="at">log_GDP_lag =</span><span class="fu">log</span>(GDP_prev),</span>
+<span id="cb14-392"><a href="#cb14-392" aria-hidden="true" tabindex="-1"></a>    <span class="at">log_GDPpc_lag =</span><span class="fu">log</span>(GDPpc_prev),</span>
+<span id="cb14-393"><a href="#cb14-393" aria-hidden="true" tabindex="-1"></a>    <span class="at">log_GDP =</span> <span class="fu">log</span>(GDP),</span>
+<span id="cb14-394"><a href="#cb14-394" aria-hidden="true" tabindex="-1"></a>    <span class="at">log_GDPpc =</span><span class="fu">log</span>(GDP_per_capita)</span>
+<span id="cb14-395"><a href="#cb14-395" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb14-396"><a href="#cb14-396" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">|&gt;</span></span>
+<span id="cb14-397"><a href="#cb14-397" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(GDP_prev))</span>
+<span id="cb14-398"><a href="#cb14-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-399"><a href="#cb14-399" aria-hidden="true" tabindex="-1"></a>panel_all <span class="ot">&lt;-</span> panel_all<span class="sc">|&gt;</span></span>
+<span id="cb14-400"><a href="#cb14-400" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb14-401"><a href="#cb14-401" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb14-402"><a href="#cb14-402" aria-hidden="true" tabindex="-1"></a>    <span class="at">Edu_share =</span> Education_investment<span class="sc">/</span>GDP,</span>
+<span id="cb14-403"><a href="#cb14-403" aria-hidden="true" tabindex="-1"></a>    <span class="at">Trade_share =</span> Volume<span class="sc">/</span>GDP</span>
+<span id="cb14-404"><a href="#cb14-404" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-405"><a href="#cb14-405" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-406"><a href="#cb14-406" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-407"><a href="#cb14-407" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb14-408"><a href="#cb14-408" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb14-409"><a href="#cb14-409" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-410"><a href="#cb14-410" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. calculate the average number of the whole country</span></span>
+<span id="cb14-411"><a href="#cb14-411" aria-hidden="true" tabindex="-1"></a>national_avg <span class="ot">&lt;-</span> panel_all <span class="sc">%&gt;%</span></span>
+<span id="cb14-412"><a href="#cb14-412" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Year) <span class="sc">%&gt;%</span></span>
+<span id="cb14-413"><a href="#cb14-413" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb14-414"><a href="#cb14-414" aria-hidden="true" tabindex="-1"></a>    <span class="at">gdp_avg =</span> <span class="fu">mean</span>(GDP, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb14-415"><a href="#cb14-415" aria-hidden="true" tabindex="-1"></a>    <span class="at">gdp_pc_avg =</span> <span class="fu">mean</span>(GDP_per_capita, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb14-416"><a href="#cb14-416" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-417"><a href="#cb14-417" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-418"><a href="#cb14-418" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. extract some typical provinces to make a sample</span></span>
+<span id="cb14-419"><a href="#cb14-419" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-420"><a href="#cb14-420" aria-hidden="true" tabindex="-1"></a>provs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Henan"</span>, <span class="st">"Shandong"</span>, <span class="st">"Guizhou"</span>, <span class="st">"Liaoning"</span>)</span>
+<span id="cb14-421"><a href="#cb14-421" aria-hidden="true" tabindex="-1"></a>df_sub <span class="ot">&lt;-</span> panel_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Region <span class="sc">%in%</span> provs)</span>
+<span id="cb14-422"><a href="#cb14-422" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-423"><a href="#cb14-423" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Combine provincial data and national average into the same long format</span></span>
+<span id="cb14-424"><a href="#cb14-424" aria-hidden="true" tabindex="-1"></a>df_plot <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(</span>
+<span id="cb14-425"><a href="#cb14-425" aria-hidden="true" tabindex="-1"></a>  df_sub <span class="sc">%&gt;%</span> <span class="fu">select</span>(Region, Year, <span class="at">value =</span> GDP_per_capita) <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">type =</span> Region),</span>
+<span id="cb14-426"><a href="#cb14-426" aria-hidden="true" tabindex="-1"></a>  national_avg <span class="sc">%&gt;%</span> <span class="fu">select</span>(Year, <span class="at">value =</span> gdp_pc_avg) <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">province =</span> <span class="st">"National"</span>, <span class="at">type =</span> <span class="st">"National"</span>)</span>
+<span id="cb14-427"><a href="#cb14-427" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-428"><a href="#cb14-428" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-429"><a href="#cb14-429" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. draw plots</span></span>
+<span id="cb14-430"><a href="#cb14-430" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df_plot, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> value, <span class="at">color =</span> type)) <span class="sc">+</span></span>
+<span id="cb14-431"><a href="#cb14-431" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb14-432"><a href="#cb14-432" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb14-433"><a href="#cb14-433" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb14-434"><a href="#cb14-434" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Time series comparison of GDPpc of typical provinces"</span>,</span>
+<span id="cb14-435"><a href="#cb14-435" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
+<span id="cb14-436"><a href="#cb14-436" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"GDP_per_capita(10 thousand Yuan)"</span>,</span>
+<span id="cb14-437"><a href="#cb14-437" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">""</span></span>
+<span id="cb14-438"><a href="#cb14-438" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb14-439"><a href="#cb14-439" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"National"</span> <span class="ot">=</span> <span class="st">"black"</span>, <span class="st">"Henan"</span> <span class="ot">=</span> <span class="st">"#1b9e77"</span>,</span>
+<span id="cb14-440"><a href="#cb14-440" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"Shandong"</span> <span class="ot">=</span> <span class="st">"#d95f02"</span>, <span class="st">"Guizhou"</span> <span class="ot">=</span> <span class="st">"#7570b3"</span>, <span class="st">"Liaoning"</span> <span class="ot">=</span> <span class="st">"#e7298a"</span>)) <span class="sc">+</span></span>
+<span id="cb14-441"><a href="#cb14-441" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>)  <span class="sc">+</span></span>
+<span id="cb14-442"><a href="#cb14-442" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb14-443"><a href="#cb14-443" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>)</span>
+<span id="cb14-444"><a href="#cb14-444" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-445"><a href="#cb14-445" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-446"><a href="#cb14-446" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-447"><a href="#cb14-447" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(p1)</span>
+<span id="cb14-448"><a href="#cb14-448" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-449"><a href="#cb14-449" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-450"><a href="#cb14-450" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Read and project provincial boundaries</span></span>
+<span id="cb14-451"><a href="#cb14-451" aria-hidden="true" tabindex="-1"></a>china_sf <span class="ot">&lt;-</span> <span class="fu">suppressMessages</span>(<span class="fu">st_read</span>(<span class="st">"data/gadm41_CHN_shp/gadm41_CHN_1.shp"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb14-452"><a href="#cb14-452" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="dv">4326</span>))</span>
+<span id="cb14-453"><a href="#cb14-453" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-454"><a href="#cb14-454" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-455"><a href="#cb14-455" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-456"><a href="#cb14-456" aria-hidden="true" tabindex="-1"></a>panel_for_map <span class="ot">&lt;-</span> panel_all<span class="sc">|&gt;</span> <span class="fu">select</span>(Region,GDP_per_capita,Year,GDP_per_capita_growth_rate)</span>
+<span id="cb14-457"><a href="#cb14-457" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-458"><a href="#cb14-458" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-459"><a href="#cb14-459" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb14-460"><a href="#cb14-460" aria-hidden="true" tabindex="-1"></a>panel_for_map <span class="ot">&lt;-</span> </span>
+<span id="cb14-461"><a href="#cb14-461" aria-hidden="true" tabindex="-1"></a>  panel_for_map <span class="sc">|&gt;</span></span>
+<span id="cb14-462"><a href="#cb14-462" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Region =</span> <span class="fu">as.character</span>(Region)) <span class="sc">|&gt;</span></span>
+<span id="cb14-463"><a href="#cb14-463" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb14-464"><a href="#cb14-464" aria-hidden="true" tabindex="-1"></a>    <span class="at">Region=</span>dplyr<span class="sc">::</span><span class="fu">recode</span>(Region,</span>
+<span id="cb14-465"><a href="#cb14-465" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Xinjiang"</span><span class="ot">=</span> <span class="st">"Xinjiang Uygur"</span> ,</span>
+<span id="cb14-466"><a href="#cb14-466" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Tibet"</span> <span class="ot">=</span> <span class="st">"Xizang"</span> ,</span>
+<span id="cb14-467"><a href="#cb14-467" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Inner Mongolia"</span><span class="ot">=</span>  <span class="st">"Nei Mongol"</span>,</span>
+<span id="cb14-468"><a href="#cb14-468" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Ningxia"</span> <span class="ot">=</span><span class="st">"Ningxia Hui"</span>,</span>
+<span id="cb14-469"><a href="#cb14-469" aria-hidden="true" tabindex="-1"></a>   <span class="at">.default          =</span> Region</span>
+<span id="cb14-470"><a href="#cb14-470" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb14-471"><a href="#cb14-471" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-472"><a href="#cb14-472" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-473"><a href="#cb14-473" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Combine panel data and spatial data to obtain the geometry and indicators of each province each year</span></span>
+<span id="cb14-474"><a href="#cb14-474" aria-hidden="true" tabindex="-1"></a>map_data <span class="ot">&lt;-</span> panel_for_map <span class="sc">%&gt;%</span></span>
+<span id="cb14-475"><a href="#cb14-475" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-476"><a href="#cb14-476" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Year =</span> <span class="fu">as.integer</span>(Year)) <span class="sc">%&gt;%</span></span>
+<span id="cb14-477"><a href="#cb14-477" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-478"><a href="#cb14-478" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(china_sf, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"Region"</span> <span class="ot">=</span> <span class="st">"NAME_1"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb14-479"><a href="#cb14-479" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>()</span>
+<span id="cb14-480"><a href="#cb14-480" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-481"><a href="#cb14-481" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Build a ggplot object (without animation)</span></span>
+<span id="cb14-482"><a href="#cb14-482" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(map_data) <span class="sc">+</span></span>
+<span id="cb14-483"><a href="#cb14-483" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> GDP_per_capita), <span class="at">color =</span> <span class="st">"grey90"</span>, <span class="at">size =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb14-484"><a href="#cb14-484" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>(</span>
+<span id="cb14-485"><a href="#cb14-485" aria-hidden="true" tabindex="-1"></a>    <span class="at">option   =</span> <span class="st">"plasma"</span>,</span>
+<span id="cb14-486"><a href="#cb14-486" aria-hidden="true" tabindex="-1"></a>    <span class="at">direction=</span> <span class="sc">-</span><span class="dv">1</span>,</span>
+<span id="cb14-487"><a href="#cb14-487" aria-hidden="true" tabindex="-1"></a>    <span class="at">na.value =</span> <span class="st">"white"</span>,</span>
+<span id="cb14-488"><a href="#cb14-488" aria-hidden="true" tabindex="-1"></a>    <span class="at">name      =</span> <span class="st">"GDP_per_capita"</span></span>
+<span id="cb14-489"><a href="#cb14-489" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb14-490"><a href="#cb14-490" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb14-491"><a href="#cb14-491" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">'China provincial GDPpc: {frame_time}'</span>,</span>
+<span id="cb14-492"><a href="#cb14-492" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Year：{frame_time}"</span>,</span>
+<span id="cb14-493"><a href="#cb14-493" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="cn">NULL</span></span>
+<span id="cb14-494"><a href="#cb14-494" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb14-495"><a href="#cb14-495" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>(<span class="at">base_size =</span> <span class="dv">14</span>) <span class="sc">+</span></span>
+<span id="cb14-496"><a href="#cb14-496" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb14-497"><a href="#cb14-497" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title    =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">18</span>),</span>
+<span id="cb14-498"><a href="#cb14-498" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">14</span>)</span>
+<span id="cb14-499"><a href="#cb14-499" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-500"><a href="#cb14-500" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-501"><a href="#cb14-501" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Add animation effect: continuous transition by Year</span></span>
+<span id="cb14-502"><a href="#cb14-502" aria-hidden="true" tabindex="-1"></a>p_anim <span class="ot">&lt;-</span> p <span class="sc">+</span></span>
+<span id="cb14-503"><a href="#cb14-503" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transition_time</span>(Year) <span class="sc">+</span></span>
+<span id="cb14-504"><a href="#cb14-504" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ease_aes</span>(<span class="st">'linear'</span>)</span>
+<span id="cb14-505"><a href="#cb14-505" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-506"><a href="#cb14-506" aria-hidden="true" tabindex="-1"></a>gif_path <span class="ot">&lt;-</span> <span class="st">"china_gdp_per_capita.gif"</span></span>
+<span id="cb14-507"><a href="#cb14-507" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-508"><a href="#cb14-508" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Render and save (GIF or MP4)</span></span>
+<span id="cb14-509"><a href="#cb14-509" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">file.exists</span>(gif_path)){</span>
+<span id="cb14-510"><a href="#cb14-510" aria-hidden="true" tabindex="-1"></a>anim <span class="ot">&lt;-</span> <span class="fu">animate</span>(</span>
+<span id="cb14-511"><a href="#cb14-511" aria-hidden="true" tabindex="-1"></a>  p_anim,</span>
+<span id="cb14-512"><a href="#cb14-512" aria-hidden="true" tabindex="-1"></a>  <span class="at">nframes =</span> <span class="fu">length</span>(<span class="fu">unique</span>(map_data<span class="sc">$</span>Year)) <span class="sc">*</span> <span class="dv">2</span>,  </span>
+<span id="cb14-513"><a href="#cb14-513" aria-hidden="true" tabindex="-1"></a>  <span class="at">fps     =</span> <span class="dv">5</span>,                                  </span>
+<span id="cb14-514"><a href="#cb14-514" aria-hidden="true" tabindex="-1"></a>  <span class="at">width   =</span> <span class="dv">800</span>,</span>
+<span id="cb14-515"><a href="#cb14-515" aria-hidden="true" tabindex="-1"></a>  <span class="at">height  =</span> <span class="dv">600</span>,</span>
+<span id="cb14-516"><a href="#cb14-516" aria-hidden="true" tabindex="-1"></a>  <span class="at">renderer =</span> <span class="fu">gifski_renderer</span>()                  </span>
+<span id="cb14-517"><a href="#cb14-517" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-518"><a href="#cb14-518" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-519"><a href="#cb14-519" aria-hidden="true" tabindex="-1"></a><span class="fu">anim_save</span>(<span class="st">"china_gdp_per_capita.gif"</span>, <span class="at">animation =</span> anim)</span>
+<span id="cb14-520"><a href="#cb14-520" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span>{<span class="fu">message</span>(<span class="st">"Using cached GIF:"</span>,gif_path)}</span>
+<span id="cb14-521"><a href="#cb14-521" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-522"><a href="#cb14-522" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-523"><a href="#cb14-523" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-524"><a href="#cb14-524" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"china_gdp_per_capita.gif"</span>)</span>
+<span id="cb14-525"><a href="#cb14-525" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-526"><a href="#cb14-526" aria-hidden="true" tabindex="-1"></a>ols_base <span class="ot">&lt;-</span> <span class="fu">lm</span>(GDP_per_capita_growth_rate <span class="sc">~</span> log_GDP_lag </span>
+<span id="cb14-527"><a href="#cb14-527" aria-hidden="true" tabindex="-1"></a>               <span class="sc">+</span> ratio <span class="sc">+</span> urbanization_rate <span class="sc">+</span> Trade_share <span class="sc">+</span> Edu_share <span class="sc">+</span> growth_rate_of_fixed_asset, </span>
+<span id="cb14-528"><a href="#cb14-528" aria-hidden="true" tabindex="-1"></a>               <span class="at">data =</span> panel_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Year<span class="sc">==</span><span class="dv">2020</span>))</span>
+<span id="cb14-529"><a href="#cb14-529" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(ols_base)</span>
+<span id="cb14-530"><a href="#cb14-530" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-531"><a href="#cb14-531" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ineq)  </span>
+<span id="cb14-532"><a href="#cb14-532" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-533"><a href="#cb14-533" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-534"><a href="#cb14-534" aria-hidden="true" tabindex="-1"></a>sigma_df <span class="ot">&lt;-</span> panel_all <span class="sc">%&gt;%</span></span>
+<span id="cb14-535"><a href="#cb14-535" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Year) <span class="sc">%&gt;%</span></span>
+<span id="cb14-536"><a href="#cb14-536" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb14-537"><a href="#cb14-537" aria-hidden="true" tabindex="-1"></a>    <span class="at">sd_log_gdppc =</span> <span class="fu">sd</span>(<span class="fu">log</span>(GDP_per_capita), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb14-538"><a href="#cb14-538" aria-hidden="true" tabindex="-1"></a>    <span class="at">cv_gdppc =</span> <span class="fu">sd</span>(GDP_per_capita, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">/</span> <span class="fu">mean</span>(GDP_per_capita, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb14-539"><a href="#cb14-539" aria-hidden="true" tabindex="-1"></a>    <span class="at">theil_gdppc =</span> <span class="fu">Theil</span>(GDP_per_capita)</span>
+<span id="cb14-540"><a href="#cb14-540" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb14-541"><a href="#cb14-541" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="sc">-</span>Year, <span class="at">names_to =</span> <span class="st">"metric"</span>, <span class="at">values_to =</span> <span class="st">"value"</span>)</span>
+<span id="cb14-542"><a href="#cb14-542" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-543"><a href="#cb14-543" aria-hidden="true" tabindex="-1"></a>sigma_df <span class="ot">&lt;-</span> sigma_df <span class="sc">%&gt;%</span></span>
+<span id="cb14-544"><a href="#cb14-544" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Year =</span> <span class="fu">as.numeric</span>(<span class="fu">as.character</span>(Year)))</span>
+<span id="cb14-545"><a href="#cb14-545" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-546"><a href="#cb14-546" aria-hidden="true" tabindex="-1"></a>p3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(sigma_df, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> value)) <span class="sc">+</span></span>
+<span id="cb14-547"><a href="#cb14-547" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb14-548"><a href="#cb14-548" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> metric, <span class="at">scales =</span> <span class="st">"free_y"</span>, <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">strip.position =</span> <span class="st">"right"</span>) <span class="sc">+</span></span>
+<span id="cb14-549"><a href="#cb14-549" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb14-550"><a href="#cb14-550" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Provincial GDP dispersion index changes by year"</span>,</span>
+<span id="cb14-551"><a href="#cb14-551" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
+<span id="cb14-552"><a href="#cb14-552" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Index value"</span></span>
+<span id="cb14-553"><a href="#cb14-553" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb14-554"><a href="#cb14-554" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>)</span>
+<span id="cb14-555"><a href="#cb14-555" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-556"><a href="#cb14-556" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(p3)</span>
+<span id="cb14-557"><a href="#cb14-557" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-558"><a href="#cb14-558" aria-hidden="true" tabindex="-1"></a>pdata <span class="ot">&lt;-</span> <span class="fu">pdata.frame</span>(panel_all, <span class="at">index =</span> <span class="fu">c</span>(<span class="st">"Region"</span>,<span class="st">"Year"</span>))</span>
+<span id="cb14-559"><a href="#cb14-559" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-560"><a href="#cb14-560" aria-hidden="true" tabindex="-1"></a>fe_mod <span class="ot">&lt;-</span> <span class="fu">plm</span>(GDP_per_capita_growth_rate <span class="sc">~</span> log_GDPpc_lag<span class="sc">+</span></span>
+<span id="cb14-561"><a href="#cb14-561" aria-hidden="true" tabindex="-1"></a>                    ratio<span class="sc">+</span></span>
+<span id="cb14-562"><a href="#cb14-562" aria-hidden="true" tabindex="-1"></a>                    urbanization_rate<span class="sc">+</span></span>
+<span id="cb14-563"><a href="#cb14-563" aria-hidden="true" tabindex="-1"></a>                    Trade_share<span class="sc">+</span> </span>
+<span id="cb14-564"><a href="#cb14-564" aria-hidden="true" tabindex="-1"></a>                    Edu_share<span class="sc">+</span> </span>
+<span id="cb14-565"><a href="#cb14-565" aria-hidden="true" tabindex="-1"></a>                    growth_rate_of_fixed_asset,</span>
+<span id="cb14-566"><a href="#cb14-566" aria-hidden="true" tabindex="-1"></a>              <span class="at">data   =</span> pdata,</span>
+<span id="cb14-567"><a href="#cb14-567" aria-hidden="true" tabindex="-1"></a>              <span class="at">model  =</span> <span class="st">"within"</span>,</span>
+<span id="cb14-568"><a href="#cb14-568" aria-hidden="true" tabindex="-1"></a>              <span class="at">effect =</span> <span class="st">"twoways"</span>)</span>
+<span id="cb14-569"><a href="#cb14-569" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fe_mod)</span>
+<span id="cb14-570"><a href="#cb14-570" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-571"><a href="#cb14-571" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(fe_mod, <span class="at">conf.int =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb14-572"><a href="#cb14-572" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(term <span class="sc">!=</span> <span class="st">"Intercept"</span>)</span>
+<span id="cb14-573"><a href="#cb14-573" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-574"><a href="#cb14-574" aria-hidden="true" tabindex="-1"></a>sigma_df <span class="ot">&lt;-</span> panel_all <span class="sc">%&gt;%</span></span>
+<span id="cb14-575"><a href="#cb14-575" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Year) <span class="sc">%&gt;%</span></span>
+<span id="cb14-576"><a href="#cb14-576" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">sd_logGDP =</span> <span class="fu">sd</span>(log_GDP, <span class="at">na.rm=</span><span class="cn">TRUE</span>))</span>
+<span id="cb14-577"><a href="#cb14-577" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-578"><a href="#cb14-578" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(sigma_df, <span class="fu">aes</span>(<span class="at">x=</span>Year,<span class="at">y=</span>sd_logGDP)) <span class="sc">+</span></span>
+<span id="cb14-579"><a href="#cb14-579" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb14-580"><a href="#cb14-580" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"The standard deviation of the logarithmic GDP of each province changes with the year"</span>,</span>
+<span id="cb14-581"><a href="#cb14-581" aria-hidden="true" tabindex="-1"></a>       <span class="at">x=</span><span class="st">"Year"</span>, <span class="at">y=</span><span class="st">"sd"</span>) <span class="sc">+</span></span>
+<span id="cb14-582"><a href="#cb14-582" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</div>
+</div>
+</div>
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-ggpmisc" class="csl-entry" role="listitem">
+Aphalo, P. J. (2024). <em>Ggpmisc: Miscellaneous extensions to ’ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggpmisc">https://CRAN.R-project.org/package=ggpmisc</a>
+</div>
+<div id="ref-plm_2" class="csl-entry" role="listitem">
+Croissant, Y., &amp; Millo, G. (2008). Panel data econometrics in <span>R</span>: The <span class="nocase">plm</span> package. <em>Journal of Statistical Software</em>, <em>27</em>(2), 1–43. <a href="https://doi.org/10.18637/jss.v027.i02">https://doi.org/10.18637/jss.v027.i02</a>
+</div>
+<div id="ref-plm_1" class="csl-entry" role="listitem">
+Croissant, Y., &amp; Millo, G. (2018). <em>Panel data econometrics with <span>R</span></em>. Wiley.
+</div>
+<div id="ref-car" class="csl-entry" role="listitem">
+Fox, J., &amp; Weisberg, S. (2019). <em>An <span>R</span> companion to applied regression</em> (Third). Sage. <a href="https://www.john-fox.ca/Companion/">https://www.john-fox.ca/Companion/</a>
+</div>
+<div id="ref-viridis" class="csl-entry" role="listitem">
+Garnier, Simon, Ross, Noam, Rudis, Robert, Camargo, Pedr, A., Sciain, Marc, Schere, &amp; Cédric. (2024). <em><span class="nocase">viridis(Lite)</span> - colorblind-friendly color maps for r</em>. <a href="https://doi.org/10.5281/zenodo.4679423">https://doi.org/10.5281/zenodo.4679423</a>
+</div>
+<div id="ref-gu2013effect" class="csl-entry" role="listitem">
+Gu, Z., Zhang, H., &amp; Hu, X. (2013). The effect of foreign trade on provincial economic growth in china: An empirical research based on the spatial durbin model. <em>Spatial Analysis</em>, <em>62</em>(18). <a href="https://www.hanspub.org/journal/PaperInformation?paperID=21026">https://www.hanspub.org/journal/PaperInformation?paperID=21026</a>
+</div>
+<div id="ref-olsrr" class="csl-entry" role="listitem">
+Hebbali, A. (2024). <em>Olsrr: Tools for building OLS regression models</em>. <a href="https://CRAN.R-project.org/package=olsrr">https://CRAN.R-project.org/package=olsrr</a>
+</div>
+<div id="ref-jin2025industrial" class="csl-entry" role="listitem">
+Jin, S. (2025). <em>Industrial upgrading and new quality productive forces: Evidence from china’s provincial panel data (2003–2022)</em>. <a href="https://arxiv.org/abs/2501.14258">https://arxiv.org/abs/2501.14258</a>
+</div>
+<div id="ref-li2022empirical" class="csl-entry" role="listitem">
+Li, W., &amp; Li, J. (2022). <em>An empirical analysis of china’s GDP growth based on linear regression models (1978–2019)</em>. Hanspub. <a href="https://pdf.hanspub.org/SA20220600000_22861074.pdf">https://pdf.hanspub.org/SA20220600000_22861074.pdf</a>
+</div>
+<div id="ref-plm_3" class="csl-entry" role="listitem">
+Millo, G. (2017). Robust standard error estimators for panel models: A unifying approach. <em>Journal of Statistical Software</em>, <em>82</em>(3), 1–27. <a href="https://doi.org/10.18637/jss.v082.i03">https://doi.org/10.18637/jss.v082.i03</a>
+</div>
+<div id="ref-here" class="csl-entry" role="listitem">
+Müller, K. (2020). <em>Here: A simpler way to find your files</em>. <a href="https://CRAN.R-project.org/package=here">https://CRAN.R-project.org/package=here</a>
+</div>
+<div id="ref-tibble" class="csl-entry" role="listitem">
+Müller, K., &amp; Wickham, H. (2023). <em>Tibble: Simple data frames</em>. <a href="https://CRAN.R-project.org/package=tibble">https://CRAN.R-project.org/package=tibble</a>
+</div>
+<div id="ref-sf_2" class="csl-entry" role="listitem">
+Pebesma, E. (2018). <span class="nocase">Simple Features for R: Standardized Support for Spatial Vector Data</span>. <em><span>The R Journal</span></em>, <em>10</em>(1), 439–446. <a href="https://doi.org/10.32614/RJ-2018-009">https://doi.org/10.32614/RJ-2018-009</a>
+</div>
+<div id="ref-sf_1" class="csl-entry" role="listitem">
+Pebesma, E., &amp; Bivand, R. (2023). <em><span class="nocase">Spatial Data Science: With applications in R</span></em>. <span>Chapman and Hall/CRC</span>. <a href="https://doi.org/10.1201/9780429459016">https://doi.org/10.1201/9780429459016</a>
+</div>
+<div id="ref-patchwork" class="csl-entry" role="listitem">
+Pedersen, T. L. (2024). <em>Patchwork: The composer of plots</em>. <a href="https://CRAN.R-project.org/package=patchwork">https://CRAN.R-project.org/package=patchwork</a>
+</div>
+<div id="ref-gganimate" class="csl-entry" role="listitem">
+Pedersen, T. L., &amp; Robinson, D. (2024). <em>Gganimate: A grammar of animated graphics</em>. <a href="https://CRAN.R-project.org/package=gganimate">https://CRAN.R-project.org/package=gganimate</a>
+</div>
+<div id="ref-broom" class="csl-entry" role="listitem">
+Robinson, D., Hayes, A., &amp; Couch, S. (2025). <em>Broom: Convert statistical objects into tidy tibbles</em>. <a href="https://CRAN.R-project.org/package=broom">https://CRAN.R-project.org/package=broom</a>
+</div>
+<div id="ref-song2018impact" class="csl-entry" role="listitem">
+Song, C., Liu, Q., Gu, S., &amp; Wang, Q. (2018). The impact of china’s urbanization on economic growth and pollutant emissions: An empirical study based on input–output analysis. <em>Journal of Cleaner Production</em>, <em>198</em>, 1289–1301. <a href="https://doi.org/10.1016/j.jclepro.2018.07.058">https://doi.org/10.1016/j.jclepro.2018.07.058</a>
+</div>
+<div id="ref-wang2021education" class="csl-entry" role="listitem">
+Wang, Y. et al. (2021). The impact of educational investment on regional economic development: Evidence from OLS and quantile regressions. <em>Hanspub</em>. <a href="https://www.hanspub.org/journal/PaperInformation?paperID=89863">https://www.hanspub.org/journal/PaperInformation?paperID=89863</a>
+</div>
+<div id="ref-ggplot2" class="csl-entry" role="listitem">
+Wickham, H. (2016). <em>ggplot2: Elegant graphics for data analysis</em>. Springer-Verlag New York. <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>
+</div>
+<div id="ref-stringr" class="csl-entry" role="listitem">
+Wickham, H. (2023). <em>Stringr: Simple, consistent wrappers for common string operations</em>. <a href="https://CRAN.R-project.org/package=stringr">https://CRAN.R-project.org/package=stringr</a>
+</div>
+<div id="ref-rvest" class="csl-entry" role="listitem">
+Wickham, H. (2024). <em>Rvest: Easily harvest (scrape) web pages</em>. <a href="https://CRAN.R-project.org/package=rvest">https://CRAN.R-project.org/package=rvest</a>
+</div>
+<div id="ref-tidyverse" class="csl-entry" role="listitem">
+Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D., Françoi, R., Grolemun, G., Haye, A., Henr, L., Heste, J., Kuh, M., Pederse, T. L., Mille, E., Bach, S. M., Müll, K., Jeroen Oo, David Robins, Dana Paige Seid, Vitalie Spi, … Hiroaki Yutani. (2019). Welcome to the <span class="nocase">tidyverse</span>. <em>Journal of Open Source Software</em>, <em>4</em>(43), 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>
+</div>
+<div id="ref-readxl" class="csl-entry" role="listitem">
+Wickham, H., &amp; Bryan, J. (2025). <em>Readxl: Read excel files</em>. <a href="https://CRAN.R-project.org/package=readxl">https://CRAN.R-project.org/package=readxl</a>
+</div>
+<div id="ref-dplyr" class="csl-entry" role="listitem">
+Wickham, H., Francois, R., Henry, L., Muller, K., &amp; Vaughan, D. (2023). <em>Dplyr: A grammar of data manipulation</em>. <a href="https://CRAN.R-project.org/package=dplyr">https://CRAN.R-project.org/package=dplyr</a>
+</div>
+<div id="ref-readr" class="csl-entry" role="listitem">
+Wickham, H., Hester, J., &amp; Bryan, J. (2024). <em>Readr: Read rectangular text data</em>. <a href="https://CRAN.R-project.org/package=readr">https://CRAN.R-project.org/package=readr</a>
+</div>
+<div id="ref-tidyr" class="csl-entry" role="listitem">
+Wickham, H., Vaughan, D., &amp; Girlich, M. (2024). <em>Tidyr: Tidy messy data</em>. <a href="https://CRAN.R-project.org/package=tidyr">https://CRAN.R-project.org/package=tidyr</a>
+</div>
+<div id="ref-sandwich_2" class="csl-entry" role="listitem">
+Zeileis, A. (2004). Econometric computing with <span>HC</span> and <span>HAC</span> covariance matrix estimators. <em>Journal of Statistical Software</em>, <em>11</em>(10), 1–17. <a href="https://doi.org/10.18637/jss.v011.i10">https://doi.org/10.18637/jss.v011.i10</a>
+</div>
+<div id="ref-sandwich_3" class="csl-entry" role="listitem">
+Zeileis, A. (2006). Object-oriented computation of sandwich estimators. <em>Journal of Statistical Software</em>, <em>16</em>(9), 1–16. <a href="https://doi.org/10.18637/jss.v016.i09">https://doi.org/10.18637/jss.v016.i09</a>
+</div>
+<div id="ref-lmtest" class="csl-entry" role="listitem">
+Zeileis, A., &amp; Hothorn, T. (2002). Diagnostic checking in regression relationships. <em>R News</em>, <em>2</em>(3), 7–10. <a href="https://CRAN.R-project.org/doc/Rnews/">https://CRAN.R-project.org/doc/Rnews/</a>
+</div>
+<div id="ref-sandwich_1" class="csl-entry" role="listitem">
+Zeileis, A., Köll, S., &amp; Graham, N. (2020). Various versatile variances: An object-oriented implementation of clustered covariances in <span>R</span>. <em>Journal of Statistical Software</em>, <em>95</em>(1), 1–36. <a href="https://doi.org/10.18637/jss.v095.i01">https://doi.org/10.18637/jss.v095.i01</a>
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
