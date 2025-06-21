@@ -1,5 +1,7 @@
 Research between GDP per capita and its growth rate
 
+The first version was rmd, then we changed to Assignment4_version1.qmd. The changes before converting are in the https://github.com/shaocaoyu-01/ETC5512_assignment4.
+
 The improvement between version 1 and 2
 
 Initially, out title is "Divergence or Convergence? Unpacking China’s Provincial Growth Trajectories", we have changed it to "Research between GDP per capita and its growth rate" 
